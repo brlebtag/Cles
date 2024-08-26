@@ -1,0 +1,1 @@
+export const CMD_REGISTER = 0;
