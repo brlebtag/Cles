@@ -1,0 +1,12 @@
+@startuml
+title Server Update
+
+server -> server: updateClients()
+note left: t1
+server --> client: CMD_SERVER_UPDATE
+note right: t2
+client -> client: serverUpdate()
+note right: t3
+client --> server: CMD_SERVER_UPDATE
+note left: t4
+@enduml

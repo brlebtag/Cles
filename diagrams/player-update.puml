@@ -1,0 +1,16 @@
+@startuml
+title Player Update
+
+client -> client: sendUpdateServer
+note left: t1
+client --> server: CMD_CLIENT_UPDATE
+note right: t2
+server -> server: clientUpdate()
+note right: t3/t1
+server --> client: CMD_SERVER_UPDATE
+note left: t4/t2
+client -> client: serverUpdate()
+note left: t5/t3
+client --> server: CMD_SERVER_UPDATE
+note right: t6/t4
+@enduml

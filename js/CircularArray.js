@@ -19,6 +19,10 @@ export default class CircularArray {
         }
     }
 
+    get capacity() {
+        return this._capacity;
+    }
+
     reset() {
         this._total = this._begin = this._end = 0;
     }

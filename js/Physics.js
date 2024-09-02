@@ -8,10 +8,11 @@ export class Body {
         this.prevPosition = new Vector2(gameObject.x, gameObject.y);
         this.temp = new Vector2();
         this.gameObject = gameObject;
+        this.mass = 1;
     }
 
     update(delta) {
-        // https://gafferongames.com/post/integration_basics/
+         // https://gafferongames.com/post/integration_basics/
         // semi-implicit euler
         this.prevPosition.copy(this.position);
         this.temp.copy(this.acceleration).scale(delta);
@@ -19,11 +20,16 @@ export class Body {
         this.position.add(this.temp);
         this.gameObject.x = this.position.x;
         this.gameObject.y = this.position.y;
+        this.acceleration.reset();
         // update game object
         // https://github.com/phaserjs/phaser/blob/v3.80.0/src/physics/arcade/Body.js#L1054
     }
 
     destroy() {
 
+    }
+
+    applyForce(force) {
+        this.acceleration.add(force.scale(1/this.mass));
     }
 }

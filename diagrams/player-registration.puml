@@ -1,0 +1,17 @@
+@startuml
+title Player Registration
+
+client --> client: registerWithServer()
+note left: t1
+client --> server: CMD_REGISTER
+server -> server: registerUser()
+note right: t2
+server --> client: CMD_REGISTER + CMD_FULL_SERVER_UPDATE
+note right: t3/t1
+client -> client: sendTick()
+note left: t4/t2
+client --> server: CMD_TICK
+note left: t5/t3
+server -> server: clientTick()
+note right: t6/t4
+@enduml
