@@ -72,7 +72,8 @@ export default class KeyboardInputs {
 
     get pad() {
         const pad = this._scene.input.gamepad;
-        if (pad.gamepads.length > this._padIndex) {
+        if (!pad) return;
+        if ((pad.gamepads.length) > this._padIndex) {
             return pad.gamepads[this._padIndex];
         }
         return;

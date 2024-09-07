@@ -1,17 +1,11 @@
-import { Body } from "../js/Physics";
-import CircularArray from '../js/CircularArray.js';
-import { SUCCESS, CMD_REGISTER, MAX_BUFFER_SIZE, CMD_END_OF_BUFFER, CMD_SERVER_UPDATE, CMD_TICK, CMD_CLIENT_UPDATE, CMD_FULL_SERVER_UPDATE } from '../js/CommandTypes.js';
+import { SUCCESS, CMD_REGISTER, MAX_BUFFER_SIZE, CMD_END_OF_BUFFER, CMD_SERVER_UPDATE, CMD_TICK_REQUEST, CMD_TICK_RESPONSE, CMD_CLIENT_UPDATE, CMD_FULL_SERVER_UPDATE, CMD_NEW_PLAYER, CMD_REMOVE_PLAYER } from '../js/CommandTypes.js';
 import KeyboardInputs from '../js/KeyboardInputs.js';
-import { TypedArraySerializer, CommandSerializer } from "../js/Serializer.js";
+import { ArrayBufferSerializer, CommandSerializer, PacketBuilder } from "../js/Serializer.js";
 import Player from "./Player.js";
 import Replayer from "./Replayer.js";
-import { MaxPacketSize } from "../js/Configuration.js";
-import { lag, timeOffset } from "../js/Lag.js";
-
+import { MaxPacketSize, MaxTimeBuffer, NetworkUpdateRate, TimeSyncRate } from "../js/Configuration.js";
 
 const MaxReconnect = 3;
-const UpdateRate = 20;
-
 
 export default class GameScene extends Phaser.Scene {
     constructor() {
@@ -20,23 +14,73 @@ export default class GameScene extends Phaser.Scene {
         }
 
         super(config);
-        this.frame = 0;
-        this.commands = new CircularArray(MAX_BUFFER_SIZE);
+        this.frame = 1;
         this.isConnected = false;
-        this.userId = -1;
         this.name = sessionStorage.getItem('name') || '';
+        this.name = !this.name ? '' : this.name;
         this.tryReconnectNetcode = 0;
-        this.updateTimer = undefined;
         this.players = new Map();
         this.serverBufferSize = MAX_BUFFER_SIZE;
-        this.commandSerializer = new CommandSerializer(new TypedArraySerializer(new Uint8Array(MaxPacketSize)));
+        this.commandSerializer = new CommandSerializer(new ArrayBufferSerializer(new ArrayBuffer(MaxPacketSize)));
+        this.player = null;
         this.t1 = this.t2 = this.t3 = this.t4 = 0;
-        this.timeOffsets = new Array(10).fill(0);
-        this.timeOffsetIndex = 0;
+        this.lags = new Array(MaxTimeBuffer).fill(0);
+        this.lagIndex = 0;
+        this.offsets = new Array(MaxTimeBuffer).fill(0);
+        this.offsetIndex = 0;
+        this.serverTime = 0;
+        this.lag = 0;
+        this.updateTimer = setInterval(this.sendUpdateServer.bind(this), NetworkUpdateRate);
+        this.timeSyncTimer = setInterval(this.sendTickRequest.bind(this), TimeSyncRate);
+        this.firstTimeSync = true;
+        this.id = -1;
     }
 
-    averageTimeOffset() {
-        return this.timeOffsets.reduce(((prev, cur) => (prev + cur)), 0) / this.timeOffsets.length;
+    computeTick() {
+        const lag = (this.t4 - this.t1) - (this.t3 - this.t2) /* / 2*/;
+        const offset = (this.t2 - this.t4) + (this.t3 - this.t1);
+
+        if (this.firstTimeSync) {
+            const lags = this.lags;
+            const offsets = this.offsets;
+            
+            for (let i = 0; i < MaxTimeBuffer; i++) {
+                lags[i] = lag;
+                offsets[i] = offset;
+            }
+
+            this.firstTimeSync = false;
+        }
+
+        this.lags[this.lagIndex++] = lag;
+
+        if (this.lagIndex >= MaxTimeBuffer) {
+            this.lagIndex = 0;
+        }
+
+        this.offsets[this.lagIndex++] = offset;
+
+        if (this.offsetIndex >= MaxTimeBuffer) {
+            this.offsetIndex = 0;
+        }
+
+        this.t1 = this.t2 = this.t3 = this.t4 = 0;
+    }
+
+    averageLag() {
+        let sum = 0;
+        for(let i = 0; i < MaxTimeBuffer; i++) {
+            sum += this.lags[i];
+        }
+        return sum / MaxTimeBuffer;
+    }
+
+    averageOffset() {
+        let sum = 0;
+        for(let i = 0; i < MaxTimeBuffer; i++) {
+            sum += this.offsets[i];
+        }
+        return sum / MaxTimeBuffer;
     }
 
     preload() {
@@ -52,42 +96,62 @@ export default class GameScene extends Phaser.Scene {
         this._inputs = new KeyboardInputs(this);
         this.player = new Player(this, 25, 25, 'box');
         this.player.setVisible(false);
+        // this.cameras.main.startFollow(this.player, true);
         this.netcode();
     }
 
     update(time, delta) {
-        if (!this.isConnected) return;
-        if (this.commands.full()) return;
+        const offset = this.averageOffset();
+        const now = Date.now();
+        this.serverTime = Math.max(this.serverTime, now + offset); //monotonic increment!
+        this.lag = this.averageLag();
+
+        if (!this.isConnected) {
+            return;
+        }
+
+        const commands = this.player.commands;
+
+        if (commands.full()) {
+            return;
+        }
 
         let command = this.inputs.command();
-        command.frame = this.frame;
-        this.commands.push(command);
 
         delta = delta / 1000; // adjust to seconds
-        // box.rotation = box.body.velocity.angle();
-        // this.box.rotation += delta;
+
+        command.frame = this.frame;
+        command.delta = delta;
+        command.time = time;
+        commands.push(command); // insere atrás
+        
         for (const [id, player] of this.players) {
-            player.body.update(delta);
+            player.update(time, delta, this.serverTime, this.lag);
+            // console.log('{"id": ',this.id, ', "time":', time, ', "delta":', delta, ', "frame":', this.frame, ', "x":', player.x, ', "y":', player.y, ', "left":', command.left, ', "right":', command.right, ', "up":', command.up, ', "down":', command.down, '}');
         }
-        // console.log(delta);
+
         this.frame++;
     }
 
     sendUpdateServer() {
-        if (!this.isConnected) return;
-        if (this.commands.empty()) return;
+        if (!this.isConnected) {
+            return;
+        }
+        const commands = this.player.commands;
+        if (commands.empty()) {
+            return;
+        }
         
-        const commands = this.commands;
         const commandSerializer = this.commandSerializer;
         commandSerializer.reset();
-        commandSerializer.writeUInt8(CMD_CLIENT_UPDATE);
-        commandSerializer.serialize(commands, Math.min(commands.length, this.serverBufferSize));
+        commandSerializer.serializer.writeUInt8(CMD_CLIENT_UPDATE);
+        const total = Math.min(commands.length, this.serverBufferSize);
+        commandSerializer.serialize(commands, total);
         this.socket.send(commandSerializer.buffer);
     }
 
     netcode() {
         this.socket = new WebSocket("ws://localhost:8080");
-
         this.socket.binaryType = "arraybuffer";
 
         this.socket.addEventListener("open", () => {
@@ -96,28 +160,43 @@ export default class GameScene extends Phaser.Scene {
         });
 
         this.socket.addEventListener("message", (event) => {
-            let t = performance.now();
+            let t = Date.now();
             if (event.data instanceof ArrayBuffer) {
                 // binary frame
-                const serializer = new TypedArraySerializer(event.data);
+                const serializer = new ArrayBufferSerializer(event.data);
                 const length = serializer.length;
-                while (serializer.bytes > length) {
+                while (!serializer.isEndOfBuffer()) {
                     switch (serializer.readUInt8()) {
                         case CMD_REGISTER:
+                            // console.log('CMD_REGISTER');
                             this.confirmServerRegistration(serializer, t);
                             break;
                         case CMD_SERVER_UPDATE:
+                            // console.log('CMD_SERVER_UPDATE');
                             this.serverUpdate(serializer, t);
                             break;
                         case CMD_FULL_SERVER_UPDATE:
+                            // console.log('CMD_FULL_SERVER_UPDATE');
                             this.fullServerUpdate(serializer);
+                            break;
+                        case CMD_NEW_PLAYER:
+                            this.newPlayer(serializer, t);
+                            break;
+                        case CMD_REMOVE_PLAYER:
+                            this.removePlayer(serializer, t);
+                            break;
+                        case CMD_TICK_REQUEST:
+                            this.sendTickResponse(serializer, t);
+                            break;
+                        case CMD_TICK_RESPONSE:
+                            this.processTick(serializer, t);
                             break;
                         case CMD_END_OF_BUFFER: return;
                     }
                 }
               } else {
                 // text frame
-                console.log(event.data);
+                console.log('Invalid message:', event.data);
               }
         });
 
@@ -129,15 +208,48 @@ export default class GameScene extends Phaser.Scene {
         this.socket.addEventListener("close", this.reconnectServer.bind(this));
     }
 
-    reconnectServer() {
-        this.isConnected = false;
-        if (this.updateTimer !== undefined) {
-            clearInterval(this.updateTimer);
+    newPlayer(serializer, t) {
+        const time = Date.now() + this.averageOffset();
+        const id = serializer.readUInt32();
+        const x = serializer.readInt32();
+        const y = serializer.readInt32();
+        const name = serializer.readString();
+        const player = new Replayer(this, x, y, 'box', time);
+        player.id = id;
+        player.name = name;
+        this.players.set(player.id, player);
+    }
+
+    removePlayer(serializer, t) {
+        const players = this.players;
+
+        while (!serializer.isEndOfBuffer()) {
+            const id = serializer.readUInt32();
+            if (players.has(id)) {
+                const player = players.get(id);
+                player.destroy(true);
+            }
+            players.delete(id);
         }
+    }
+
+    reconnectServer() {
+        const player = this.player;
+        const players = this.players;
+
+        for(let [id, p] of this.players) {
+            if (p !== player) {
+                p.destroy(true);
+            }
+        }
+
+        players.clear();
+        players.set(this.player.id, this.player);
+        this.isConnected = false;
+
         if (this.tryReconnectNetcode > MaxReconnect)
         {
             console.log('server disconnected!');
-            alert('server disconnected!');
             return;
         }
         this.tryReconnectNetcode++;
@@ -155,47 +267,59 @@ export default class GameScene extends Phaser.Scene {
             this.name = name = prompt('Your Name?');
             sessionStorage.setItem('name', name);
         }
-        
-        // CMD_REGISTER(1) + width(4) + height(4) + player width (4) + player height (4) + name's length (4) = 21
-        let serializer = new TypedArraySerializer(new ArrayBuffer(name.length + 21));
-        serializer.writeUInt8(CMD_REGISTER);
-        serializer.writeUInt32(width);
-        serializer.writeUInt32(height);
-        serializer.writeUInt32(this.player.width);
-        serializer.writeUInt32(this.player.height);
-        serializer.writeString(name);
-        this.t1 = performance.now();
-        this.socket.send(serializer.buffer);
+
+        const builder = new PacketBuilder(PacketBuilder.ArrayBufferAllocator);
+        builder.writeUInt8(CMD_REGISTER);
+        builder.writeUInt32(width);
+        builder.writeUInt32(height);
+        builder.writeUInt32(this.player.width);
+        builder.writeUInt32(this.player.height);
+        builder.writeString(name);
+        this.socket.send(builder.buffer);
     }
 
     confirmServerRegistration(serializer, t) {
+        const player = this.player;
+
         if (serializer.readUInt8() === SUCCESS) {
             this.isConnected = true;
             const userId = serializer.readUInt32();
-            this.player.id = userId;
-            this.player.x = serializer.readInt32();
-            this.player.y = serializer.readInt32();
-            // this.box.setSize(serializer.readUInt32(), serializer.readUInt32());
+            this.id = player.id = userId;
+            player.setPosition(serializer.readInt32(), serializer.readInt32());
             this.serverBufferSize = serializer.readUInt32();
-            this.t2 = serializer.readFloat64();
-            this.t3 = serializer.readFloat64();
-            this.t4 = t;
-            this.player.setVisible(true);
-            this.players.set(userId, this.player);
-            this.updateTimer = setInterval(this.sendUpdateServer.bind(this), UpdateRate);
-            this.sendTick();
-        } else {
-            this.t1 = this.t4 = 0;
+            player.setVisible(true);
+            this.players.set(userId, player);
         }
     }
 
-    sendTick() {
-        let serializer = new TypedArraySerializer(new ArrayBuffer(18));
-        serializer.writeUInt8(CMD_TICK);
-        serializer.writeFloat64(this.t4);
-        serializer.writeFloat64(performance.now());
-        serializer.writeUInt8(CMD_END_OF_BUFFER);
-        this.socket.send(serializer.buffer);
+    sendTickRequest() {
+        if (!this.isConnected) {
+            return;
+        }
+
+        const builder = new PacketBuilder(PacketBuilder.ArrayBufferAllocator);
+        builder.writeUInt8(CMD_TICK_REQUEST);
+        this.socket.send(builder.buffer);
+        this.t1 = Date.now();
+    }
+
+    sendTickResponse(serializer, t) {
+        if (!this.isConnected) {
+            return;
+        }
+
+        const builder = new PacketBuilder(PacketBuilder.ArrayBufferAllocator);
+        builder.writeUInt8(CMD_TICK_RESPONSE);
+        builder.writeFloat64(t);
+        builder.writeFloat64(Date.now());
+        this.socket.send(builder.buffer);
+    }
+
+    processTick(serializer, t) {
+        this.t2 = serializer.readFloat64();
+        this.t3 = serializer.readFloat64();
+        this.t4 = t;
+        this.computeTick();
     }
 
     serverUpdate(serializer, t) {
@@ -206,52 +330,42 @@ export default class GameScene extends Phaser.Scene {
         const lastProcessedFrame = serializer.readUInt32();
         let x = serializer.readInt32();
         let y = serializer.readInt32();
-        if (playerId !== this.player.id) {
-            this.sendConfirmServerUpdate(t);
-            return;
-        }
-        player.lastKnownPosition.x = x;
-        player.lastKnownPosition.y = y;
-        player.lastProcessedFrame = lastProcessedFrame;
         const serverCurrentTime = serializer.readFloat64();
-        while (serializer.isEndOfBuffer() || serializer.peakUInt8() !== CMD_END_OF_BUFFER) {
+        
+        const commands = player.commands;
+
+        while (commands.length > 0 && commands.front().frame <= lastProcessedFrame) {
+            commands.shift(); // remove comandos já processado.
+        }
+
+        player.lastProcessedFrame = lastProcessedFrame;
+        player.reconciliate(x, y, this.serverTime);
+
+        while (!serializer.isEndOfBuffer()) {
             playerId = serializer.readUInt32();
             x = serializer.readInt32();
             y = serializer.readInt32();
             
             if (players.has(playerId)) {
-                players[playerId].addKnownPosition(x, y, serverCurrentTime);
+                const player = players.get(playerId);
+                player.addKnownPosition(x, y, serverCurrentTime);
             }
         }
-
-        this.sendConfirmServerUpdate(t);
-        this.reconciliate();
-    }
-
-    reconciliate() {
-
     }
 
     fullServerUpdate(serializer) {
-        while (serializer.isEndOfBuffer() || serializer.peakUInt32() !== CMD_END_OF_BUFFER) {
+        const time = Date.now() + this.averageOffset();
+
+        while (!serializer.isEndOfBuffer()) {
             const id = serializer.readUInt32();
             const x = serializer.readInt32();
             const y = serializer.readInt32();
             const name = serializer.readString();
-            const player = new Replayer(this, x, y, 'box');
+            const player = new Replayer(this, x, y, 'box', time);
             player.id = id;
             player.name = name;
             this.players.set(player.id, player);
         }
-    }
-
-    sendConfirmServerUpdate(t) {
-        const serializer = new TypedArraySerializer(new ArrayBuffer(18));
-        serializer.writeUInt8(CMD_SERVER_UPDATE);
-        serializer.writeFloat64(t);
-        serializer.writeFloat64(performance.now());
-        serializer.writeUInt8(CMD_END_OF_BUFFER);
-        this.socket.send(serializer.buffer);
     }
 }
 
@@ -260,6 +374,9 @@ let config = {
     width: 1280,
     height: 720,
     parent: document.getElementById('game'),
+    /*fps: {
+        limit: 1,
+    },*/
     scene: [GameScene]
 };
 

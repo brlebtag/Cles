@@ -56,10 +56,14 @@ export class CommandSerializer {
         this.serializer.reset();
     }
 
+    get buffer() {
+        return this.serializer.buffer;
+    }
+
     serialize(commands, total = commands.length) {
+        const serializer = this.serializer;
         const len1 = Math.min(commands.length, total);
         const len2 = serializer.length;
-        const serializer = this.serializer;
 
         if (len1 <= 0){
             serializer.writeUInt8(CMD_END_OF_BUFFER);
@@ -111,7 +115,7 @@ export class BufferSerializer {
     constructor(buf) {
         this.bytes = 0;
         this.buffer = buf;
-        this.length = buf.size;
+        this.length = buf.length;
     }
 
     reset() {
@@ -119,7 +123,7 @@ export class BufferSerializer {
     }
 
     isEndOfBuffer() {
-        return this.bytes > this.length;
+        return this.bytes >= this.length;
     }
     
     writeString(str) {
@@ -159,7 +163,8 @@ export class BufferSerializer {
     }
 
     readInt8() {
-        return this.buffer.readInt8(this.bytes++);
+        const val = this.buffer.readInt8(this.bytes++);
+        return val;
     }
     
     peakInt8() {
@@ -171,7 +176,8 @@ export class BufferSerializer {
     }
 
     readUInt8() {
-        return this.buffer.readUInt8(this.bytes++);
+        const val = this.buffer.readUInt8(this.bytes++);
+        return val;
     }
 
     peakUInt8() {
@@ -307,15 +313,15 @@ export class BufferSerializer {
     }
 }
 
-export class TypedArraySerializer {
+export class ArrayBufferSerializer {
     constructor(buf) {
         this.bytes = 0;
         this.buffer = new DataView(buf);
-        this.length = buf.length;
+        this.length = this.buffer.byteLength;
     }
 
     isEndOfBuffer() {
-        return this.bytes > this.length;
+        return this.bytes >= this.length;
     }
 
     reset() {
@@ -359,19 +365,21 @@ export class TypedArraySerializer {
     }
 
     readInt8() {
-        return this.buffer.getInt8(this.bytes++);
+        const val = this.buffer.getInt8(this.bytes++);
+        return val;
     }
 
     peakInt8() {
         return this.buffer.getInt8(this.bytes);
     }
 
-    writeUInt8() {
+    writeUInt8(value) {
         this.buffer.setUint8(this.bytes++, value);
     }
 
     readUInt8() {
-        return this.buffer.getUint8(this.bytes++);
+        const val = this.buffer.getUint8(this.bytes++);
+        return val;
     }
 
     peakUInt8() {
@@ -380,7 +388,7 @@ export class TypedArraySerializer {
 
     /* 16 */
 
-    writeInt16() {
+    writeInt16(value) {
         this.buffer.setInt16(this.bytes, value);
         this.bytes += 2;
     }
@@ -395,7 +403,7 @@ export class TypedArraySerializer {
         return this.buffer.getInt16(this.bytes);
     }
 
-    writeUInt16() {
+    writeUInt16(value) {
         this.buffer.setUint16(this.bytes, value);
         this.bytes += 2;
     }
@@ -412,7 +420,7 @@ export class TypedArraySerializer {
 
     /* 32 */
 
-    writeInt32() {
+    writeInt32(value) {
         this.buffer.setInt32(this.bytes, value);
         this.bytes += 4;
     }
@@ -427,7 +435,7 @@ export class TypedArraySerializer {
         return this.buffer.getInt32(this.bytes);
     }
 
-    writeUInt32() {
+    writeUInt32(value) {
         this.buffer.setUint32(this.bytes, value);
         this.bytes += 4;
     }
@@ -444,7 +452,7 @@ export class TypedArraySerializer {
 
     /* 64 */
 
-    writeInt64() {
+    writeInt64(value) {
         this.buffer.setBigInt64(this.bytes, value);
         this.bytes += 8;
     }
@@ -459,7 +467,7 @@ export class TypedArraySerializer {
         return this.buffer.getBigInt64(this.bytes);
     }
 
-    writeUInt64() {
+    writeUInt64(value) {
         this.buffer.setBigUint64(this.bytes, value);
         this.bytes += 8;
     }
@@ -475,7 +483,7 @@ export class TypedArraySerializer {
     }
 
     /* 32 */
-    writeFloat32() {
+    writeFloat32(value) {
         this.buffer.setFloat32(this.bytes, value);
         this.bytes += 4;
     }
@@ -491,7 +499,7 @@ export class TypedArraySerializer {
     }
 
     /* 64 */
-    writeFloat64() {
+    writeFloat64(value) {
         this.buffer.setFloat64(this.bytes, value);
         this.bytes += 8;
     }
@@ -506,3 +514,180 @@ export class TypedArraySerializer {
         return this.buffer.getFloat64(this.bytes);
     }
 }
+
+export class Allocator {
+    constructor() {
+        this.bytes = 0;
+    }
+
+    get length() {
+        return this.bytes;
+    }
+
+    string(str) {
+        this.bytes += 4 + str.length;
+        return this;
+    }
+    
+    int8() {
+        this.bytes++;
+        return this;
+    }
+    
+    uint8() {
+        this.bytes++;
+        return this;
+    }
+
+    int16() {
+        this.bytes += 2;
+        return this;
+    }
+
+    uint16() {
+        this.bytes += 2;
+        return this;
+    }
+
+    int32() {
+        this.bytes += 4;
+        return this;
+    }
+
+    uint32() {
+        this.bytes += 4;
+        return this;
+    }
+
+    int64(value) {
+        this.bytes += 8;
+        return this;
+    }
+
+    uint64() {
+        this.bytes += 8;
+        return this;
+    }
+
+    float32() {
+        this.bytes += 4;
+        return this;
+    }
+
+    float64() {
+        this.bytes += 8;
+        return this;
+    }
+}
+
+
+export class PacketBuilder {
+    constructor(serializerMaker) {
+        this.alloc = new Allocator();
+        this.serializerMaker = serializerMaker;
+        this.data = [];
+    }
+
+    get buffer() {
+        const data = this.data;
+        const serializer = this.serializerMaker(this.alloc.length);
+
+        for (const [code, value] of data) {
+            switch(code) {
+                case 1:
+                    serializer.writeString(value);
+                    break;
+                case 2:
+                    serializer.writeInt8(value);
+                    break;
+                case 3:
+                    serializer.writeUInt8(value);
+                    break;
+                case 4:
+                    serializer.writeInt16(value);
+                    break;
+                case 5:
+                    serializer.writeUInt16(value);
+                    break;
+                case 6:
+                    serializer.writeInt32(value);
+                    break;
+                case 7:
+                    serializer.writeUInt32(value);
+                    break;
+                case 8:
+                    serializer.writeInt64(value);
+                    break;
+                case 9:
+                    serializer.writeUInt64(value);
+                    break;
+                case 10:
+                    serializer.writeFloat32(value);
+                    break;
+                case 11:
+                    serializer.writeFloat64(value);
+                    break;
+            }
+        }
+
+        return serializer.buffer;
+    }
+    
+    writeString(str) {
+        this.alloc.string(str);
+        this.data.push([1, str]);
+    }
+
+    writeInt8(value) {
+        this.alloc.int8();
+        this.data.push([2, value]);
+    }
+
+    writeUInt8(value) {
+        this.alloc.uint8();
+        this.data.push([3, value]);
+    }
+
+    writeInt16(value) {
+        this.alloc.int16();
+        this.data.push([4, value]);
+    }
+
+    writeUInt16(value) {
+        this.alloc.uint16();
+        this.data.push([5, value]);
+    }
+
+    writeInt32(value) {
+        this.alloc.int32();
+        this.data.push([6, value]);
+    }
+
+    writeUInt32(value) {
+        this.alloc.uint32();
+        this.data.push([7, value]);
+    }
+
+    writeInt64(value) {
+        this.alloc.int64();
+        this.data.push([8, value]);
+    }
+
+    writeUInt64(value) {
+        this.alloc.uint64();
+        this.data.push([9, value]);
+    }
+
+    writeFloat32(value) {
+        this.alloc.float32();
+        this.data.push([10, value]);
+    }
+
+    writeFloat64(value) {
+        this.alloc.float64();
+        this.data.push([11, value]);
+    }
+}
+
+PacketBuilder.BufferAllocator = (bytes) => new BufferSerializer(Buffer.alloc(bytes));
+PacketBuilder.ArrayBufferAllocator = (bytes) => new ArrayBufferSerializer(new ArrayBuffer(bytes));

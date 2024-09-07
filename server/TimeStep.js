@@ -1,14 +1,13 @@
-const FPS = 60;
-const MIN_FPS = 5;
-const FRAME_RATE = 1000 / FPS; // Taxa de atualização
+import { GameUpdateFPS, GameUpdateRate } from "../js/Configuration.js";
+const MinFPS = 5;
 const DeltaSmoothingMax = 10;
-const MIN_FRAME_RATE = 1000 / MIN_FPS;
+const MinFrameRate = 1000 / MinFPS;
 
 export default class TimeStep {
     constructor() {
         this.started = false;
         this.running = false;
-        this.actualFps = FPS;
+        this.actualFps = GameUpdateFPS;
         this.nextFpsUpdate = 0;
         this.framesThisSecond = 0;
         this.deltaHistory = new Array(DeltaSmoothingMax);
@@ -27,7 +26,7 @@ export default class TimeStep {
         this.running = true;
 
         for (var i = 0; i < DeltaSmoothingMax; i++) {
-            this.deltaHistory[i] = FRAME_RATE;
+            this.deltaHistory[i] = GameUpdateRate;
         }
 
         this.resetDelta();
@@ -36,7 +35,7 @@ export default class TimeStep {
 
         this.callback = callback;
         
-        this.timer = setInterval(() => this.step(performance.now()), FRAME_RATE);
+        this.timer = setInterval(() => this.step(performance.now()), GameUpdateRate);
     }
 
     resetDelta() {
@@ -47,7 +46,7 @@ export default class TimeStep {
         this.framesThisSecond = 0;
 
         for (var i = 0; i < DeltaSmoothingMax; i++) {
-            this.deltaHistory[i] = Math.min(FRAME_RATE, this.deltaHistory[i]);
+            this.deltaHistory[i] = Math.min(GameUpdateRate, this.deltaHistory[i]);
         }
 
         this.delta = 0;
@@ -58,7 +57,7 @@ export default class TimeStep {
         let idx = this.deltaIndex;
         let history = this.deltaHistory;
 
-        if (delta > MIN_FRAME_RATE)
+        if (delta > MinFrameRate)
         {
             //  Probably super bad start time or browser tab context loss,
             //  so use the last 'sane' delta value
@@ -66,7 +65,7 @@ export default class TimeStep {
             delta = history[idx];
 
             //  Clamp delta to min (in case history has become corrupted somehow)
-            delta = Math.min(delta, MIN_FRAME_RATE);
+            delta = Math.min(delta, MinFrameRate);
         }
 
         //  Smooth out the delta over the previous X frames

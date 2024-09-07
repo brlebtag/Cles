@@ -20,7 +20,7 @@ export default class CommandInputs {
     }
 
     consume(command) {
-        this._command = command;
+        this._command = command || {};
     }
 
     get keys() {
