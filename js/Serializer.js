@@ -65,27 +65,25 @@ export class CommandSerializer {
         const len1 = Math.min(commands.length, total);
         const len2 = serializer.length;
 
-        if (len1 <= 0){
-            serializer.writeUInt8(CMD_END_OF_BUFFER);
-            return 0;
-        } 
+        if (len1 <= 0) return 0;
 
         serializer.writeUInt32(len1);  // length
         let first = commands.at(0);
         serializer.writeUInt32(first.frame);  // first frame number
         serializer.writeUInt8(cmdToByte(first)); // command
+        serializer.writeFloat64(first.delta);
 
         for (let i = 1; (i < len1) && (serializer.bytes < len2); i++) {
-            serializer.writeUInt8(cmdToByte(commands.at(i))); // more commands
+            const cmd = commands.at(i);
+            serializer.writeUInt8(cmdToByte(cmd)); // more commands
+            serializer.writeFloat64(cmd.delta);
         }
-
-        let written = serializer.bytes;
 
         if (serializer.bytes < len2) {
             serializer.writeUInt8(CMD_END_OF_BUFFER);
         }
 
-        return written;
+        return serializer.bytes;
     }
 
     deserialize() {
@@ -97,11 +95,13 @@ export class CommandSerializer {
             const firstFrame = serializer.readUInt32(); // first frame number
             let firstCmd = byteToCmd(serializer.readUInt8()); // first command
             firstCmd.frame = firstFrame;
+            firstCmd.delta = serializer.readFloat64();
             commands.push(firstCmd);
         
             for (let i = 1; i < length; i++) {
                 const cmd = byteToCmd(serializer.readUInt8()); // more commands
                 cmd.frame = firstFrame + i;
+                cmd.delta = serializer.readFloat64();
                 commands.push(cmd);
             }
         }

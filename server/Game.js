@@ -16,6 +16,7 @@ export default class Game {
         this._inputs = new CommandInputs();
         this.updateTimer = setInterval(this.updateClients.bind(this), NetworkUpdateRate);
         this.timeSyncTimer = setInterval(this.sendTickRequest.bind(this), TimeSyncRate);
+        this.userUpdateLock = 0;
     }
 
     create() {
@@ -36,10 +37,10 @@ export default class Game {
         delta = delta / 1000; // adjust to seconds
 
         for (const [id, player] of this.players) {
-            if (player.buffer.empty()) return;
+            if (player.isDisconnected || player.buffer.empty()) return;
             const cmd = player.buffer.shift(); // remove na frente
             this._inputs.consume(cmd);
-            player.update(time, delta);
+            player.update(time, cmd.delta);
             player.lastProcessedFrame = cmd.frame;
             // console.log('{"id":', id, ', "time":', time, ', "delta":', delta, ', "frame":', cmd.frame, ', "x":', player.x, ', "y":', player.y, ', "left":', cmd.left, ', "right":', cmd.right, ', "up":', cmd.up, ', "down":', cmd.down, '}');
         }
@@ -51,16 +52,18 @@ export default class Game {
 
     removePlayer(ws) {
         if (ws.player) {
-            ws.player.isDisconnected = true;
+            ws.player.disconnect();;
             // this.namesToIds.delete(ws.player.name);
             // this.players.delete(ws.player.id);
             this.playerDisconnected(ws, ws.player);
+            this.userUpdateLock++;
         }
     }
 
     netcode() {
         this.wss.on('connection', (ws) => {
             console.log('New connection!');
+            this.userUpdateLock++;
             ws.player = null;
 
             ws.on('error', (err) => {
@@ -93,6 +96,9 @@ export default class Game {
                             case CMD_TICK_RESPONSE:
                                 // console.log('CMD_TICK');
                                 this.processTick(ws, serializer, t);
+                                break;
+                            case CMD_FULL_SERVER_UPDATE:
+                                this.sendFullServerUpdate(ws, serializer, t)
                                 break;
                             case CMD_END_OF_BUFFER: return;
                         }
@@ -130,6 +136,7 @@ export default class Game {
             players.set(player.id, player);
         } else {
             player = players.get(namesToIds.get(name));
+            player.disconnect();
         }
         ws.id = player.id;
         ws.player = player;
@@ -137,7 +144,6 @@ export default class Game {
 
         this.newPlayerConnected(ws, player);
         this.sendRegistrationConfirmation(ws, player, t);
-        this.sendFullServerUpdate(ws, player, t);
         console.log(`player #${player.id} registered!`);
     }
 
@@ -279,6 +285,7 @@ export default class Game {
         builder.writeInt32(curPlayer.x);
         builder.writeInt32(curPlayer.y);
         builder.writeFloat64(Date.now());
+        builder.writeUInt32(this.userUpdateLock);
 
         for (const [id, player] of this.players) {
             if (player === curPlayer) continue;
@@ -291,12 +298,15 @@ export default class Game {
         ws.send(builder.buffer);
     }
 
-    sendFullServerUpdate(ws, curPlayer, t) {
+    sendFullServerUpdate(ws, serializer, t) {
+        if (!ws.player) return;
+        const curPlayer = ws.player;
         const builder = new PacketBuilder(PacketBuilder.BufferAllocator);
         builder.writeUInt8(CMD_FULL_SERVER_UPDATE);
+        builder.writeUInt32(this.userUpdateLock);
 
         for (const [id, player] of this.players) {
-            if (player === curPlayer || player.isDisconnected) continue;
+            if (player.id === curPlayer.id || player.isDisconnected) continue;
 
             builder.writeUInt32(player.id);
             builder.writeInt32(player.x);

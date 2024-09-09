@@ -4,6 +4,7 @@ import { MAX_BUFFER_SIZE } from '../js/CommandTypes.js';
 import CircularArray from '../js/CircularArray.js';
 import { MaxSpeed, MaxTimeBuffer } from "../js/Configuration.js";
 import Vector2 from "../js/Vector2.js";
+import Accumulator from "../js/Accumulator.js";
 
 export default class Player extends Sprite {
     constructor(scene, x, y, width, height) {
@@ -15,11 +16,8 @@ export default class Player extends Sprite {
         this.body = new Body(this);
         this.temp = new Vector2(0, 0);
         this.t1 = this.t2 = this.t3 = this.t4 = 0;
-        this.lags = new Array(MaxTimeBuffer).fill(0);
-        this.lagIndex = 0;
-        this.offsets = new Array(MaxTimeBuffer).fill(0);
-        this.offsetIndex = 0;
-        this.firstTimeSync = true;
+        this.lags = new Accumulator(MaxTimeBuffer);
+        this.offsets = new Accumulator(MaxTimeBuffer);
         this.isDisconnected = false;
     }
 
@@ -41,46 +39,23 @@ export default class Player extends Sprite {
         const lag = (this.t4 - this.t1) - (this.t3 - this.t2) / 2;
         const offset = (this.t2 - this.t4) + (this.t3 - this.t1);
 
-        if (this.firstTimeSync) {
-            const lags = this.lags;
-            const offsets = this.offsets;
-            
-            for (let i = 0; i < MaxTimeBuffer; i++) {
-                lags[i] = lag;
-                offsets[i] = offset;
-            }
-
-            this.firstTimeSync = false;
-        }
-
-        this.lags[this.lagIndex++] = lag;
-
-        if (this.lagIndex > MaxTimeBuffer) {
-            this.lagIndex = 0;
-        }
-
-        this.offsets[this.lagIndex++] = offset;
-
-        if (this.offsetIndex > MaxTimeBuffer) {
-            this.offsetIndex = 0;
-        }
+        this.lags.add(lag);
+        this.offsets.add(offset);
 
         this.t1 = this.t2 = this.t3 = this.t4 = 0;
     }
 
     averageLag() {
-        let sum = 0;
-        for(let i = 0; i < MaxTimeBuffer; i++) {
-            sum += this.lags[i];
-        }
-        return sum / MaxTimeBuffer;
+        return this.lags.average();
     }
 
     averageOffset() {
-        let sum = 0;
-        for(let i = 0; i < MaxTimeBuffer; i++) {
-            sum += this.offsets[i];
-        }
-        return sum / MaxTimeBuffer;
+        return this.offsets.average();
+    }
+
+    disconnect() {
+        this.isDisconnected = true;
+        this.lastReceivedFrame = this.lastProcessedFrame = 0;
+        this.body.velocity.set(0, 0);
     }
 }

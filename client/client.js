@@ -4,7 +4,7 @@ import { ArrayBufferSerializer, CommandSerializer, PacketBuilder } from "../js/S
 import Player from "./Player.js";
 import Replayer from "./Replayer.js";
 import { MaxPacketSize, MaxTimeBuffer, NetworkUpdateRate, TimeSyncRate } from "../js/Configuration.js";
-
+import Accumulator from '../js/Accumulator.js';
 const MaxReconnect = 3;
 
 export default class GameScene extends Phaser.Scene {
@@ -24,63 +24,25 @@ export default class GameScene extends Phaser.Scene {
         this.commandSerializer = new CommandSerializer(new ArrayBufferSerializer(new ArrayBuffer(MaxPacketSize)));
         this.player = null;
         this.t1 = this.t2 = this.t3 = this.t4 = 0;
-        this.lags = new Array(MaxTimeBuffer).fill(0);
-        this.lagIndex = 0;
-        this.offsets = new Array(MaxTimeBuffer).fill(0);
-        this.offsetIndex = 0;
+        this.lags = new Accumulator(MaxTimeBuffer);
+        this.offsets = new Accumulator(MaxTimeBuffer);
         this.serverTime = 0;
         this.lag = 0;
         this.updateTimer = setInterval(this.sendUpdateServer.bind(this), NetworkUpdateRate);
         this.timeSyncTimer = setInterval(this.sendTickRequest.bind(this), TimeSyncRate);
         this.firstTimeSync = true;
         this.id = -1;
+        this.userUpdateLock = 0;
     }
 
     computeTick() {
         const lag = (this.t4 - this.t1) - (this.t3 - this.t2) /* / 2*/;
         const offset = (this.t2 - this.t4) + (this.t3 - this.t1);
 
-        if (this.firstTimeSync) {
-            const lags = this.lags;
-            const offsets = this.offsets;
-            
-            for (let i = 0; i < MaxTimeBuffer; i++) {
-                lags[i] = lag;
-                offsets[i] = offset;
-            }
-
-            this.firstTimeSync = false;
-        }
-
-        this.lags[this.lagIndex++] = lag;
-
-        if (this.lagIndex >= MaxTimeBuffer) {
-            this.lagIndex = 0;
-        }
-
-        this.offsets[this.lagIndex++] = offset;
-
-        if (this.offsetIndex >= MaxTimeBuffer) {
-            this.offsetIndex = 0;
-        }
+        this.lags.add(lag);
+        this.offsets.add(offset);
 
         this.t1 = this.t2 = this.t3 = this.t4 = 0;
-    }
-
-    averageLag() {
-        let sum = 0;
-        for(let i = 0; i < MaxTimeBuffer; i++) {
-            sum += this.lags[i];
-        }
-        return sum / MaxTimeBuffer;
-    }
-
-    averageOffset() {
-        let sum = 0;
-        for(let i = 0; i < MaxTimeBuffer; i++) {
-            sum += this.offsets[i];
-        }
-        return sum / MaxTimeBuffer;
     }
 
     preload() {
@@ -101,10 +63,10 @@ export default class GameScene extends Phaser.Scene {
     }
 
     update(time, delta) {
-        const offset = this.averageOffset();
+        const offset = this.offsets.average();
         const now = Date.now();
         this.serverTime = Math.max(this.serverTime, now + offset); //monotonic increment!
-        this.lag = this.averageLag();
+        this.lag = this.lags.average();
 
         if (!this.isConnected) {
             return;
@@ -146,8 +108,9 @@ export default class GameScene extends Phaser.Scene {
         commandSerializer.reset();
         commandSerializer.serializer.writeUInt8(CMD_CLIENT_UPDATE);
         const total = Math.min(commands.length, this.serverBufferSize);
-        commandSerializer.serialize(commands, total);
-        this.socket.send(commandSerializer.buffer);
+        if (commandSerializer.serialize(commands, total) > 0) {
+            this.socket.send(commandSerializer.buffer);
+        }
     }
 
     netcode() {
@@ -209,7 +172,7 @@ export default class GameScene extends Phaser.Scene {
     }
 
     newPlayer(serializer, t) {
-        const time = Date.now() + this.averageOffset();
+        const time = Date.now() + this.offsets.average();
         const id = serializer.readUInt32();
         const x = serializer.readInt32();
         const y = serializer.readInt32();
@@ -289,7 +252,14 @@ export default class GameScene extends Phaser.Scene {
             this.serverBufferSize = serializer.readUInt32();
             player.setVisible(true);
             this.players.set(userId, player);
+            this.askFullServerUpdate();
         }
+    }
+
+    askFullServerUpdate() {
+        const builder = new PacketBuilder(PacketBuilder.ArrayBufferAllocator);
+        builder.writeUInt8(CMD_FULL_SERVER_UPDATE);
+        this.socket.send(builder.buffer);
     }
 
     sendTickRequest() {
@@ -331,6 +301,7 @@ export default class GameScene extends Phaser.Scene {
         let x = serializer.readInt32();
         let y = serializer.readInt32();
         const serverCurrentTime = serializer.readFloat64();
+        const userUpdateLock = serializer.readUInt32();
         
         const commands = player.commands;
 
@@ -351,10 +322,30 @@ export default class GameScene extends Phaser.Scene {
                 player.addKnownPosition(x, y, serverCurrentTime);
             }
         }
+
+        if (userUpdateLock !== this.userUpdateLock) {
+            this.askFullServerUpdate();
+            this.userUpdateLock = userUpdateLock;
+        }
+    }
+
+    getIds() {
+        let ids = {};
+        const players = this.players;
+
+        for(let [id, p] of players) {
+            ids[id] = id;
+        }
+
+        return ids;
     }
 
     fullServerUpdate(serializer) {
-        const time = Date.now() + this.averageOffset();
+        const time = Date.now() + this.offsets.average();
+        this.userUpdateLock = serializer.readUInt32();
+        const ids = this.getIds();
+        const players = this.players;
+        const myId = this.id;
 
         while (!serializer.isEndOfBuffer()) {
             const id = serializer.readUInt32();
@@ -364,7 +355,15 @@ export default class GameScene extends Phaser.Scene {
             const player = new Replayer(this, x, y, 'box', time);
             player.id = id;
             player.name = name;
-            this.players.set(player.id, player);
+            players.set(player.id, player);
+            delete ids[id];
+        }
+
+        for (var [_, id] of Object.entries(ids)) {
+            if (id === myId) continue;
+            const player = players.get(id);
+            player.destroy(true);
+            players.delete(id);
         }
     }
 }
