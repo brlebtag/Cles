@@ -32,3 +32,11 @@ export class Random {
         return this.nextValue() * (max - min) + min;
     }
 }
+
+export function randomColor() {
+    let color = 0;
+    for(let i = 0; i < 6; i++) {
+        color |= nextInteger(0, 15) << (4 * i);
+    }
+    return color;
+}

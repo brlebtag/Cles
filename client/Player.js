@@ -1,26 +1,27 @@
-import { Body } from "../js/Physics";
-import { MaxSpeed } from "../js/Configuration.js";
-import { MAX_BUFFER_SIZE } from '../js/CommandTypes.js';
+import Character from "./Character.js";
+import { MaxSpeed, MaxCommandsSize, PlayerType } from "../js/Configuration.js";
 import CircularArray from "../js/CircularArray.js";
-import Sprite from "../js/Sprite.js";
+import { Body } from "../js/Physics.js";
+import Sprite from '../js/Sprite.js';
 
-export default class Player extends Phaser.GameObjects.Sprite {
+export default class Player extends Character {
     constructor(scene, x, y, texture) {
         super(scene, x, y, texture);
-        this.scene.add.existing(this);
-        this.body = new Body(this);
-        this.lastKnownPosition = new Phaser.Math.Vector2(0, 0);
-        this.lastProcessedFrame = this.id = -1;
-        this.isReconciliated = true;
+        this.lastProcessedFrame = this.lastReceivedFrame = this.id = -1;
         this.temp = new Phaser.Math.Vector2(0, 0);
-        this.commands = new CircularArray(MAX_BUFFER_SIZE);
+        this.commands = new CircularArray(MaxCommandsSize);
         this.virtualSprite = new Sprite(scene, x, y, this.width, this.height);
         this.virtualBody = new Body(this.virtualSprite);
+        this.isReconciliated = true;
+        this.type = PlayerType
     }
 
     update(time, delta, serverTime, avgLag) {
-        const { body, virtualBody, virtualSprite, temp, isReconciliated } = this;
+        const { body, virtualBody: vBody, virtualSprite: vSprite, temp, isReconciliated } = this;
+        if (!this.scene) return;
         const { left, right, down, up } = this.scene.inputs;
+
+        avgLag++;
 
         temp.set(
             (left ? -1 : 0) + (right ? 1 : 0),
@@ -29,60 +30,82 @@ export default class Player extends Phaser.GameObjects.Sprite {
 
         temp.setLength(MaxSpeed);
 
+        body.velocity.set(temp.x, temp.y);
+        body.update(time, delta);
+        /*
         // Testar colisão...
         if (isReconciliated) {
             body.velocity.set(temp.x, temp.y);
             body.update(time, delta);
         } else {
-            virtualBody.velocity.set(temp.x, temp.y);
-            virtualBody.update(time, delta);
+            vBody.velocity.set(temp.x, temp.y);
+            vBody.update(time, delta);
 
-            temp.copy(virtualBody.position);
+            temp.copy(vBody.position);
             temp.subtract(body.position);
             const length = temp.length();
             const maxDistance = MaxSpeed * delta; // duas vezes a distancia de uma passagem
 
             if (length < maxDistance) {
-                this.x = virtualSprite.x;
-                this.y = virtualSprite.y;
-                body.position.copy(virtualBody.position);
-                body.prevPosition.copy(virtualBody.prevPosition);
-                // virtualBody.reset();
+                this.x = vSprite.x;
+                this.y = vSprite.y;
+                body.position.copy(vBody.position);
+                body.prevPosition.copy(vBody.prevPosition);
                 this.isReconciliated = true;
             } else {
-                // const lag = 1000 / (avgLag === 0 ? 100 /* tempo minimo para corrigir desvio*/ : avgLag);
-                // temp.setLength(length / lag); // velocidade é baseado no lag!
-                temp.setLength(MaxSpeed);
+                const speed = length / ((avgLag / 1000) / delta);
+                temp.setLength(speed > MaxSpeed ? speed : MaxSpeed);
                 // coloca uma velocidade para ele alcançar até o próximo pacote chegar (lag)
                 body.velocity.set(temp.x, temp.y);
                 body.update(time, delta);
             }
+        }*/
+
+        const velocity = body.velocity.length();
+        if (velocity > 0) {
+            this.anims.play(`walking-${this.getFace(body.velocity)}`, true);
+        } else {
+            this.anims.play('stop');
         }
+        this.updateNameTag();
+        // speed = length / (lag / delta)
     }
 
     reconciliate(x, y, time) {
+        // console.log(`Reconciliate!`);
         const temp = this.temp;
-        const virtualSprite = this.virtualSprite;
-        const virtualBody = this.virtualBody;
         const commands = this.commands;
-        this.isReconciliated = false;
+        const vSprite = this;
+        const vBody = this.body;
+        
+        if (!vBody) return;
 
-        virtualSprite.copy(this);
-        virtualBody.position.set(x - virtualSprite.displayOriginX, y - virtualSprite.displayOriginY);
-        virtualBody.prevPosition.copy(virtualBody.position);
+        // this.isReconciliated = false;
+
+        vSprite.x = x;
+        vSprite.y = y;
+
         const length = commands.length;
 
-        for (let i = 0; i > length; i++) {
+        // console.log(`Reconciliating at (${this.x}, ${this.y}). ${length} commands to reconciliate!`);
+
+        for (let i = 0; i < length; i++) {
             const cmd = commands.at(i);
+
             // se usar aceleração/força, deve ser recalculado aqui!
             temp.set(
                 (cmd.left ? -1 : 0) + (cmd.right ? 1 : 0),
                 (cmd.up ? -1 : 0) + (cmd.down ? 1 : 0)
             );
+
             temp.setLength(MaxSpeed);
-            virtualBody.velocity.set(temp.x, temp.y);
+
+            vBody.velocity.set(temp.x, temp.y);
+
             // Colisão deve ser testado aqui!
-            virtualBody.update(time, cmd.delta);
+            vBody.update(time, cmd.delta);
+
+            // console.log(`-> (${this.x}, ${this.y})`);
         }
     }
 }

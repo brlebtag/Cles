@@ -73,8 +73,8 @@ export class Body {
         const go = this.gameObject;
         this.acceleration.reset();
         this.velocity.reset();
-        this.position.copy(go);
-        this.prevPosition.copy(go);
+        this.position.copy(go.position);
+        this.prevPosition.copy(go.prevPosition);
         this.mass = 1;
     }
 

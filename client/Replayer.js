@@ -1,81 +1,62 @@
-import { Body } from "../js/Physics";
-import { MaxSpeed } from "../js/Configuration.js";
+import Character from "./Character.js";
+import PositionAccumulator from "./PositionAccumulator.js";
+import { ReplayerType } from "../js/Configuration.js";
 
 const MaxKnownPositions = 120;
 const MaxInterpolationTime = 100/*ms*/;
 
-export default class Replayer extends Phaser.GameObjects.Sprite {
+export default class Replayer extends Character {
     constructor(scene, x, y, texture, time) {
         super(scene, x, y, texture);
-        this.scene.add.existing(this);
-        const body = this.body = new Body(this);
+        const body = this.body;
         body.position.x = x - this.displayOriginX;
         body.position.y = y - this.displayOriginY;
         body.prevPosition.copy(body.position);
-
-        this.lastKnownPositions = new Array(MaxKnownPositions);
-        this.lastKnownPositionIndex = 1;
-
-        for (let i = 0; i < MaxKnownPositions; i++) {
-            this.lastKnownPositions[i] = new Phaser.Math.Vector2(x, y);
-            this.lastKnownPositions[i].time = time;
-        }
+        this.positions = new PositionAccumulator(MaxKnownPositions);
+        this.type = ReplayerType;
     }
 
     update(time, delta, serverTime, avgLag) {
-        // this.body.update(delta);
-        const [previous, next] = this.findStraddlePosition(serverTime - MaxInterpolationTime);
+        // console.log(serverTime);
 
-        if (previous == null) {
+        serverTime -= MaxInterpolationTime;
+        const {previous, next} = this.positions.straddle(serverTime);
+
+        if (previous === null) {
+            this.anims.play('stop');
             return;
         }
 
         const divisor = serverTime - previous.time;
         const quotient = next.time - previous.time;
+        // const perc = quotient == 0 ? 0 : (divisor / quotient);
 
-        const pos = Phaser.Math.LinearXY(previous, next, quotient == 0 ? 0 :divisor / quotient); // checar isso aqui!
+        const pos = Phaser.Math.LinearXY(previous, next, quotient == 0 ? 0 : (divisor / quotient)); // checar isso aqui!
         this.x = pos.x;
         this.y = pos.y;
+
+        // console.log(previous.time, serverTime, next.time, perc, previous.x, previous.y, '->', this.x, this.y, '->', next.x, next.y);
+
         // sync physics engine!
         const body = this.body;
         body.prevPosition.copy(body.position);
         body.position.x = pos.x - this.displayOriginX;
         body.position.y = pos.y - this.displayOriginY;
+        body.velocity.copy(body.position);
+        body.velocity.subtract(body.prevPosition);
+
+        const velocity = body.velocity.length();
+
+        if (velocity > 0) {
+            this.anims.play(`walking-${this.getFace(body.velocity)}`, true);
+        } else {
+            this.anims.play('stop');
+        }
+
+        this.updateNameTag();
     }
 
     addKnownPosition(x, y, time) {
-        const lastKnownPosition = this.lastKnownPositions[this.lastKnownPositionIndex++];
-        lastKnownPosition.x = x;
-        lastKnownPosition.y = y;
-        lastKnownPosition.time = time;
-        if (this.lastKnownPositionIndex >= MaxKnownPositions) {
-            this.lastKnownPositionIndex = 0;
-        }
-    }
-
-    findStraddlePosition(time) {
-        const knownPositions = this.lastKnownPositions;
-        let next = this.lastKnownPositionIndex;
-        let prev = next - 1;
-        if (prev < 0) prev = MaxKnownPositions - 1;
-
-        for (let i = 0; i < MaxKnownPositions; i++) {
-            if (knownPositions[next].time >= time && knownPositions[prev].time <= time) {
-                return [this.lastKnownPositions[prev], this.lastKnownPositions[next]];
-            }
-
-            next = next - 1;
-            prev = next - 1;
-
-            if (next < 0) {
-                next = MaxKnownPositions - 1;
-            }
-
-            if (prev < 0) {
-                prev = MaxKnownPositions - 1;
-            }
-        }
-
-        return [null, null];
+        this.positions.add(x, y, time);
     }
 }

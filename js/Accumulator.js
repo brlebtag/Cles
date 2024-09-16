@@ -1,6 +1,6 @@
 export default class Accumulator {
     constructor(size) {
-        this.data = new Array(size);
+        this.data = new Array(size).fill(0);
         this.firstTime = true;
         this.index = 0;
     }
@@ -12,7 +12,7 @@ export default class Accumulator {
         if (this.firstTime) {
             this.firstTime = false;
 
-            for(let i = 0; i <len; i++) {
+            for(let i = 0; i < len; i++) {
                 data[i] = value;
             }
             return;
@@ -34,7 +34,7 @@ export default class Accumulator {
             mean += data[i];
         }
 
-        return mean / len;
+        return Math.floor(mean / len);
     }
 
     clear() {

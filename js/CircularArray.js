@@ -24,7 +24,7 @@ export default class CircularArray {
     }
 
     reset() {
-        this._total = this._begin = this._end = 0;
+        this._begin = this._end = this._total = 0;
     }
 
     clear() {
