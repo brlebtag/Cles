@@ -5,20 +5,3247 @@
 server started!
 New connection!
 CMD_REGISTER
-Player 1 must be at (106, 2) in frame 0
-[#1] Player "brlebtag"'s buffer is too low for too long!
-Player 1 must be at (106, 2) in frame 0
-Player 1 must be at (106, 2) in frame 0
-[#1] Player "brlebtag" is not responding!
-[#1] Player "brlebtag"'s buffer is too low for too long!
-Player 1 must be at (106, 2) in frame 0
-Player 1 must be at (106, 2) in frame 0
-[#1] Player "brlebtag"'s buffer is too low for too long!
-Player 1 must be at (106, 2) in frame 0
-Player 1 must be at (106, 2) in frame 0
-[#1] Player "brlebtag" is not responding!
-[#1] Player "brlebtag"'s buffer is too low for too long!
-Player 1 must be at (106, 2) in frame 0
-Player 1 must be at (106, 2) in frame 0
-[#1] Player "brlebtag"'s buffer is too low for too long!
-Player 1 must be at (106, 2) in frame 0
+Player 1 must be at (133, 118) in frame 0
+frame received: 1
+frame received: 2
+frame received: 3
+frame received: 4
+frame received: 5
+frame received: 6
+frame received: 7
+frame received: 8
+frame received: 9
+frame received: 10
+frame received: 11
+frame received: 12
+frame received: 13
+frame received: 14
+frame received: 15
+frame received: 16
+frame received: 17
+frame received: 18
+frame received: 19
+frame received: 20
+frame received: 21
+frame received: 22
+frame received: 23
+frame received: 24
+frame received: 25
+frame received: 26
+frame received: 27
+frame received: 28
+frame received: 29
+frame received: 30
+frame received: 31
+frame received: 32
+frame received: 33
+frame received: 34
+frame received: 35
+frame received: 36
+frame received: 37
+frame received: 38
+frame received: 39
+frame received: 40
+frame received: 41
+frame received: 42
+frame received: 43
+frame received: 44
+frame received: 45
+frame received: 46
+frame received: 47
+frame received: 48
+frame received: 49
+frame received: 50
+frame received: 51
+frame received: 52
+frame received: 53
+frame received: 54
+frame received: 55
+frame received: 56
+frame received: 57
+frame received: 58
+frame received: 59
+Frame added: 1
+Frame added: 2
+Frame added: 3
+Frame added: 4
+Frame added: 5
+Frame added: 6
+Frame added: 7
+Frame added: 8
+Frame added: 9
+Frame added: 10
+Frame added: 11
+Frame added: 12
+Frame added: 13
+Frame added: 14
+Frame added: 15
+Frame added: 16
+Frame added: 17
+Frame added: 18
+Frame added: 19
+Frame added: 20
+Frame added: 21
+Frame added: 22
+Frame added: 23
+Frame added: 24
+Frame added: 25
+Frame added: 26
+Frame added: 27
+Frame added: 28
+Frame added: 29
+Frame added: 30
+Frame added: 31
+Frame added: 32
+Frame added: 33
+Frame added: 34
+Frame added: 35
+Frame added: 36
+Frame added: 37
+Frame added: 38
+Frame added: 39
+Frame added: 40
+Frame added: 41
+Frame added: 42
+Frame added: 43
+Frame added: 44
+Frame added: 45
+Frame added: 46
+Frame added: 47
+Frame added: 48
+Frame added: 49
+Frame added: 50
+Frame added: 51
+Frame added: 52
+Frame added: 53
+Frame added: 54
+Frame added: 55
+Frame added: 56
+Frame added: 57
+Frame added: 58
+Frame added: 59
+lastReceivedFrame: 59
+Player: 1, lastProcessedFrame: 1, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 2, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 3, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 4, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 5, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 6, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 7, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 8, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 9, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 10, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 11, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 12, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 13, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 14, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 15, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 16, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 17, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 18, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 19, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 20, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 21, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 22, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 23, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 24, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 25, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 26, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 27, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 28, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 29, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 30, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 31, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 32, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 33, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 34, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 35, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 36, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 37, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 38, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 39, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 40, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 41, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 42, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 43, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 44, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 45, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 46, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 47, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 48, X: 133, Y: 118
+Player 1 must be at (133, 118) in frame 48
+Player: 1, lastProcessedFrame: 49, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 50, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 51, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 52, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 53, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 54, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 55, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 56, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 57, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 58, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 59, X: 133, Y: 118
+frame received: 49
+frame received: 50
+frame received: 51
+frame received: 52
+frame received: 53
+frame received: 54
+frame received: 55
+frame received: 56
+frame received: 57
+frame received: 58
+frame received: 59
+frame received: 60
+frame received: 61
+frame received: 62
+frame received: 63
+frame received: 64
+frame received: 65
+frame received: 66
+frame received: 67
+frame received: 68
+frame received: 69
+frame received: 70
+frame received: 71
+frame received: 72
+frame received: 73
+frame received: 74
+frame received: 75
+frame received: 76
+frame received: 77
+frame received: 78
+frame received: 79
+frame received: 80
+frame received: 81
+frame received: 82
+frame received: 83
+frame received: 84
+frame received: 85
+frame received: 86
+frame received: 87
+frame received: 88
+frame received: 89
+frame received: 90
+frame received: 91
+frame received: 92
+frame received: 93
+frame received: 94
+frame received: 95
+frame received: 96
+frame received: 97
+frame received: 98
+frame received: 99
+frame received: 100
+frame received: 101
+frame received: 102
+frame received: 103
+frame received: 104
+frame received: 105
+frame received: 106
+frame received: 107
+frame received: 108
+Frame ignored: 49
+Frame ignored: 50
+Frame ignored: 51
+Frame ignored: 52
+Frame ignored: 53
+Frame ignored: 54
+Frame ignored: 55
+Frame ignored: 56
+Frame ignored: 57
+Frame ignored: 58
+Frame ignored: 59
+Frame added: 60
+Frame added: 61
+Frame added: 62
+Frame added: 63
+Frame added: 64
+Frame added: 65
+Frame added: 66
+Frame added: 67
+Frame added: 68
+Frame added: 69
+Frame added: 70
+Frame added: 71
+Frame added: 72
+Frame added: 73
+Frame added: 74
+Frame added: 75
+Frame added: 76
+Frame added: 77
+Frame added: 78
+Frame added: 79
+Frame added: 80
+Frame added: 81
+Frame added: 82
+Frame added: 83
+Frame added: 84
+Frame added: 85
+Frame added: 86
+Frame added: 87
+Frame added: 88
+Frame added: 89
+Frame added: 90
+Frame added: 91
+Frame added: 92
+Frame added: 93
+Frame added: 94
+Frame added: 95
+Frame added: 96
+Frame added: 97
+Frame added: 98
+Frame added: 99
+Frame added: 100
+Frame added: 101
+Frame added: 102
+Frame added: 103
+Frame added: 104
+Frame added: 105
+Frame added: 106
+Frame added: 107
+Frame added: 108
+lastReceivedFrame: 108
+Player: 1, lastProcessedFrame: 60, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 61, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 62, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 63, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 64, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 65, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 66, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 67, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 68, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 69, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 70, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 71, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 72, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 73, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 74, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 75, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 76, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 77, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 78, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 79, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 80, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 81, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 82, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 83, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 84, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 85, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 86, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 87, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 88, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 89, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 90, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 91, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 92, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 93, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 94, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 95, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 96, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 97, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 98, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 99, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 100, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 101, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 102, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 103, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 104, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 105, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 106, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 107, X: 133, Y: 118
+Player 1 must be at (133, 118) in frame 107
+Player: 1, lastProcessedFrame: 108, X: 133, Y: 118
+frame received: 108
+frame received: 109
+frame received: 110
+frame received: 111
+frame received: 112
+frame received: 113
+frame received: 114
+frame received: 115
+frame received: 116
+frame received: 117
+frame received: 118
+frame received: 119
+frame received: 120
+frame received: 121
+frame received: 122
+frame received: 123
+frame received: 124
+frame received: 125
+frame received: 126
+frame received: 127
+frame received: 128
+frame received: 129
+frame received: 130
+frame received: 131
+frame received: 132
+frame received: 133
+frame received: 134
+frame received: 135
+frame received: 136
+frame received: 137
+frame received: 138
+frame received: 139
+frame received: 140
+frame received: 141
+frame received: 142
+frame received: 143
+frame received: 144
+frame received: 145
+frame received: 146
+frame received: 147
+frame received: 148
+frame received: 149
+frame received: 150
+frame received: 151
+frame received: 152
+frame received: 153
+frame received: 154
+frame received: 155
+frame received: 156
+frame received: 157
+frame received: 158
+frame received: 159
+frame received: 160
+frame received: 161
+frame received: 162
+frame received: 163
+frame received: 164
+frame received: 165
+frame received: 166
+frame received: 167
+frame received: 168
+frame received: 169
+frame received: 170
+frame received: 171
+frame received: 172
+frame received: 173
+frame received: 174
+frame received: 175
+frame received: 176
+frame received: 177
+frame received: 178
+Frame ignored: 108
+Frame added: 109
+Frame added: 110
+Frame added: 111
+Frame added: 112
+Frame added: 113
+Frame added: 114
+Frame added: 115
+Frame added: 116
+Frame added: 117
+Frame added: 118
+Frame added: 119
+Frame added: 120
+Frame added: 121
+Frame added: 122
+Frame added: 123
+Frame added: 124
+Frame added: 125
+Frame added: 126
+Frame added: 127
+Frame added: 128
+Frame added: 129
+Frame added: 130
+Frame added: 131
+Frame added: 132
+Frame added: 133
+Frame added: 134
+Frame added: 135
+Frame added: 136
+Frame added: 137
+Frame added: 138
+Frame added: 139
+Frame added: 140
+Frame added: 141
+Frame added: 142
+Frame added: 143
+Frame added: 144
+Frame added: 145
+Frame added: 146
+Frame added: 147
+Frame added: 148
+Frame added: 149
+Frame added: 150
+Frame added: 151
+Frame added: 152
+Frame added: 153
+Frame added: 154
+Frame added: 155
+Frame added: 156
+Frame added: 157
+Frame added: 158
+Frame added: 159
+Frame added: 160
+Frame added: 161
+Frame added: 162
+Frame added: 163
+Frame added: 164
+Frame added: 165
+Frame added: 166
+Frame added: 167
+Frame added: 168
+Frame added: 169
+Frame added: 170
+Frame added: 171
+Frame added: 172
+Frame added: 173
+Frame added: 174
+Frame added: 175
+Frame added: 176
+Frame added: 177
+Frame added: 178
+lastReceivedFrame: 178
+Player: 1, lastProcessedFrame: 109, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 110, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 111, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 112, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 113, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 114, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 115, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 116, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 117, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 118, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 119, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 120, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 121, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 122, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 123, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 124, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 125, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 126, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 127, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 128, X: 133, Y: 118
+Player: 1, lastProcessedFrame: 129, X: 133, Y: 119.62064419000001
+Player: 1, lastProcessedFrame: 130, X: 134.1471661870345, Y: 120.7678103770345
+Player: 1, lastProcessedFrame: 131, X: 135.295733725359, Y: 121.916377915359
+Player: 1, lastProcessedFrame: 132, X: 136.43756220371864, Y: 123.05820639371862
+Player: 1, lastProcessedFrame: 133, X: 137.5832572480238, Y: 124.20390143802378
+Player: 1, lastProcessedFrame: 134, X: 138.7335926876516, Y: 125.35423687765154
+Player: 1, lastProcessedFrame: 135, X: 139.89505182204408, Y: 126.51569601204405
+Player: 1, lastProcessedFrame: 136, X: 141.05657642038238, Y: 127.67722061038236
+Player: 1, lastProcessedFrame: 137, X: 142.21771727187053, Y: 128.83836146187053
+Player: 1, lastProcessedFrame: 138, X: 143.378368586263, Y: 129.99901277626302
+Player: 1, lastProcessedFrame: 139, X: 144.53107814397967, Y: 131.15172233397968
+Player: 1, lastProcessedFrame: 140, X: 145.68285908664487, Y: 132.30350327664488
+Player: 1, lastProcessedFrame: 141, X: 146.83416384946148, Y: 133.4548080394615
+Player: 1, lastProcessedFrame: 142, X: 147.99187561489853, Y: 134.61251980489857
+Player: 1, lastProcessedFrame: 143, X: 149.14819078080313, Y: 135.7688349708032
+Player: 1, lastProcessedFrame: 144, X: 150.3041821059441, Y: 136.92482629594417
+Player: 1, lastProcessedFrame: 145, X: 151.4480779241156, Y: 138.06872211411567
+Player: 1, lastProcessedFrame: 146, X: 152.5916868902792, Y: 139.21233108027923
+Player: 1, lastProcessedFrame: 147, X: 153.7352234628505, Y: 140.35586765285055
+Player: 1, lastProcessedFrame: 148, X: 154.8787581120914, Y: 141.49940230209143
+Player: 1, lastProcessedFrame: 149, X: 156.0296071092322, Y: 142.65025129923222
+Player: 1, lastProcessedFrame: 150, X: 157.1733892882729, Y: 143.79403347827292
+Player: 1, lastProcessedFrame: 151, X: 158.31619776713376, Y: 144.9368419571338
+Player: 1, lastProcessedFrame: 152, X: 159.45932394200034, Y: 146.07996813200037
+Player: 1, lastProcessedFrame: 153, X: 160.60264498135368, Y: 147.2232891713537
+Player: 1, lastProcessedFrame: 154, X: 161.73851374455836, Y: 148.3591579345584
+Player: 1, lastProcessedFrame: 155, X: 162.8742917435366, Y: 149.49493593353662
+Player: 1, lastProcessedFrame: 156, X: 164.01010249570092, Y: 150.63074668570096
+Player 1 must be at (164.01010249570092, 150.63074668570096) in frame 156
+Player: 1, lastProcessedFrame: 157, X: 165.14301337467134, Y: 151.76365756467138
+Player: 1, lastProcessedFrame: 158, X: 166.27684786237722, Y: 152.89749205237726
+Player: 1, lastProcessedFrame: 159, X: 167.40399447050703, Y: 154.02463866050707
+Player: 1, lastProcessedFrame: 160, X: 168.53850076622356, Y: 155.1591449562236
+Player: 1, lastProcessedFrame: 161, X: 169.67303603210493, Y: 156.29368022210497
+Player: 1, lastProcessedFrame: 162, X: 170.80184556446525, Y: 157.4224897544653
+Player: 1, lastProcessedFrame: 163, X: 171.93129186062419, Y: 158.55193605062422
+Player: 1, lastProcessedFrame: 164, X: 173.06912921617874, Y: 159.68977340617877
+Player: 1, lastProcessedFrame: 165, X: 174.20782760151863, Y: 160.82847179151867
+Player: 1, lastProcessedFrame: 166, X: 175.3471163573812, Y: 161.96776054738123
+Player: 1, lastProcessedFrame: 167, X: 176.48270886103754, Y: 163.10335305103757
+Player: 1, lastProcessedFrame: 168, X: 177.6173271907525, Y: 164.23797138075253
+Player: 1, lastProcessedFrame: 169, X: 178.7592470131661, Y: 165.37989120316612
+Player: 1, lastProcessedFrame: 170, X: 179.90088706171065, Y: 166.52153125171068
+frame received: 157
+frame received: 158
+frame received: 159
+frame received: 160
+frame received: 161
+frame received: 162
+frame received: 163
+frame received: 164
+frame received: 165
+frame received: 166
+frame received: 167
+frame received: 168
+frame received: 169
+frame received: 170
+frame received: 171
+frame received: 172
+frame received: 173
+frame received: 174
+frame received: 175
+frame received: 176
+frame received: 177
+frame received: 178
+frame received: 179
+frame received: 180
+frame received: 181
+frame received: 182
+frame received: 183
+frame received: 184
+frame received: 185
+frame received: 186
+frame received: 187
+frame received: 188
+frame received: 189
+frame received: 190
+frame received: 191
+frame received: 192
+frame received: 193
+frame received: 194
+frame received: 195
+frame received: 196
+frame received: 197
+frame received: 198
+frame received: 199
+frame received: 200
+frame received: 201
+frame received: 202
+frame received: 203
+frame received: 204
+frame received: 205
+frame received: 206
+frame received: 207
+frame received: 208
+frame received: 209
+frame received: 210
+frame received: 211
+frame received: 212
+frame received: 213
+frame received: 214
+frame received: 215
+frame received: 216
+frame received: 217
+Frame ignored: 157
+Frame ignored: 158
+Frame ignored: 159
+Frame ignored: 160
+Frame ignored: 161
+Frame ignored: 162
+Frame ignored: 163
+Frame ignored: 164
+Frame ignored: 165
+Frame ignored: 166
+Frame ignored: 167
+Frame ignored: 168
+Frame ignored: 169
+Frame ignored: 170
+Frame ignored: 171
+Frame ignored: 172
+Frame ignored: 173
+Frame ignored: 174
+Frame ignored: 175
+Frame ignored: 176
+Frame ignored: 177
+Frame ignored: 178
+Frame added: 179
+Frame added: 180
+Frame added: 181
+Frame added: 182
+Frame added: 183
+Frame added: 184
+Frame added: 185
+Frame added: 186
+Frame added: 187
+Frame added: 188
+Frame added: 189
+Frame added: 190
+Frame added: 191
+Frame added: 192
+Frame added: 193
+Frame added: 194
+Frame added: 195
+Frame added: 196
+Frame added: 197
+Frame added: 198
+Frame added: 199
+Frame added: 200
+Frame added: 201
+Frame added: 202
+Frame added: 203
+Frame added: 204
+Frame added: 205
+Frame added: 206
+Frame added: 207
+Frame added: 208
+Frame added: 209
+Frame added: 210
+Frame added: 211
+Frame added: 212
+Frame added: 213
+Frame added: 214
+Frame added: 215
+Frame added: 216
+Frame added: 217
+lastReceivedFrame: 217
+Player: 1, lastProcessedFrame: 171, X: 181.04490996818393, Y: 167.66555415818397
+Player: 1, lastProcessedFrame: 172, X: 182.19437858682184, Y: 168.81502277682188
+Player: 1, lastProcessedFrame: 173, X: 183.3359666205916, Y: 169.95661081059163
+Player: 1, lastProcessedFrame: 174, X: 184.4766263857922, Y: 171.09727057579224
+Player: 1, lastProcessedFrame: 175, X: 185.61631320741722, Y: 172.23695739741726
+Player: 1, lastProcessedFrame: 176, X: 186.755364241051, Y: 173.37600843105105
+Player: 1, lastProcessedFrame: 177, X: 187.8936272183193, Y: 174.51427140831933
+Player: 1, lastProcessedFrame: 178, X: 189.03196512062212, Y: 175.65260931062215
+Player: 1, lastProcessedFrame: 179, X: 190.16957688790026, Y: 176.7902210779003
+Player: 1, lastProcessedFrame: 180, X: 191.30751286363758, Y: 177.92815705363762
+Player: 1, lastProcessedFrame: 181, X: 192.4360943257767, Y: 179.05673851577674
+Player: 1, lastProcessedFrame: 182, X: 193.5647723221336, Y: 180.18541651213363
+Player: 1, lastProcessedFrame: 183, X: 194.70100224012674, Y: 181.32164643012678
+Player: 1, lastProcessedFrame: 184, X: 195.83074348466621, Y: 182.45138767466625
+Player: 1, lastProcessedFrame: 185, X: 196.9607894639441, Y: 183.58143365394415
+Player: 1, lastProcessedFrame: 186, X: 198.09197633880027, Y: 184.7126205288003
+Player: 1, lastProcessedFrame: 187, X: 199.22517575976383, Y: 185.84581994976386
+Player: 1, lastProcessedFrame: 188, X: 200.35913580134977, Y: 186.9797799913498
+Player: 1, lastProcessedFrame: 189, X: 201.49330781940657, Y: 188.1139520094066
+Player: 1, lastProcessedFrame: 190, X: 202.62754122847412, Y: 189.24818541847415
+Player: 1, lastProcessedFrame: 191, X: 203.76999745502087, Y: 190.3906416450209
+Player: 1, lastProcessedFrame: 192, X: 204.9122462659355, Y: 191.53289045593553
+Player: 1, lastProcessedFrame: 193, X: 206.05490942728176, Y: 192.6755536172818
+Player: 1, lastProcessedFrame: 194, X: 207.20521340772882, Y: 193.82585759772886
+Player: 1, lastProcessedFrame: 195, X: 208.34893892630313, Y: 194.96958311630317
+Player: 1, lastProcessedFrame: 196, X: 209.4916361560541, Y: 196.11228034605415
+Player: 1, lastProcessedFrame: 197, X: 210.64007580704617, Y: 197.2607199970462
+Player: 1, lastProcessedFrame: 198, X: 211.781456446397, Y: 198.40210063639702
+Player: 1, lastProcessedFrame: 199, X: 212.92251650474643, Y: 199.54316069474646
+Player: 1, lastProcessedFrame: 200, X: 214.06319294352494, Y: 200.68383713352497
+Player: 1, lastProcessedFrame: 201, X: 215.20268888874546, Y: 201.8233330787455
+Player: 1, lastProcessedFrame: 202, X: 216.33534284046695, Y: 202.95598703046699
+Player: 1, lastProcessedFrame: 203, X: 217.46801210812131, Y: 204.08865629812135
+Player: 1, lastProcessedFrame: 204, X: 218.59948247622816, Y: 205.2201266662282
+Player: 1, lastProcessedFrame: 205, X: 219.73006560210132, Y: 206.35070979210136
+Player: 1, lastProcessedFrame: 206, X: 220.86058419740962, Y: 207.48122838740966
+Player: 1, lastProcessedFrame: 207, X: 221.99064673005728, Y: 208.61129092005731
+Player: 1, lastProcessedFrame: 208, X: 223.1270929095884, Y: 209.74773709958845
+Player: 1, lastProcessedFrame: 209, X: 224.26182197929637, Y: 210.8824661692964
+Player: 1, lastProcessedFrame: 210, X: 225.38940573498044, Y: 212.01004992498048
+Player: 1, lastProcessedFrame: 211, X: 226.5173735344995, Y: 213.13801772449955
+Player: 1, lastProcessedFrame: 212, X: 227.6524655479761, Y: 214.27310973797614
+Player: 1, lastProcessedFrame: 213, X: 228.78677641352047, Y: 215.4074206035205
+Player: 1, lastProcessedFrame: 214, X: 229.91381371001296, Y: 216.534457900013
+Player: 1, lastProcessedFrame: 215, X: 231.04788108333722, Y: 217.66852527333725
+Player: 1, lastProcessedFrame: 216, X: 232.18191284676396, Y: 218.802557036764
+Player: 1, lastProcessedFrame: 217, X: 233.31645647771856, Y: 219.9371006677186
+Player 1 must be at (233.31645647771856, 219.9371006677186) in frame 217
+frame received: 218
+frame received: 219
+frame received: 220
+frame received: 221
+frame received: 222
+frame received: 223
+frame received: 224
+frame received: 225
+frame received: 226
+frame received: 227
+frame received: 228
+frame received: 229
+frame received: 230
+frame received: 231
+frame received: 232
+frame received: 233
+frame received: 234
+frame received: 235
+frame received: 236
+frame received: 237
+frame received: 238
+frame received: 239
+frame received: 240
+frame received: 241
+frame received: 242
+frame received: 243
+frame received: 244
+frame received: 245
+frame received: 246
+frame received: 247
+frame received: 248
+frame received: 249
+frame received: 250
+frame received: 251
+frame received: 252
+frame received: 253
+frame received: 254
+frame received: 255
+frame received: 256
+frame received: 257
+frame received: 258
+frame received: 259
+frame received: 260
+frame received: 261
+frame received: 262
+frame received: 263
+frame received: 264
+frame received: 265
+frame received: 266
+frame received: 267
+frame received: 268
+frame received: 269
+frame received: 270
+frame received: 271
+frame received: 272
+frame received: 273
+frame received: 274
+frame received: 275
+frame received: 276
+frame received: 277
+frame received: 278
+frame received: 279
+frame received: 280
+frame received: 281
+frame received: 282
+frame received: 283
+frame received: 284
+frame received: 285
+frame received: 286
+frame received: 287
+frame received: 288
+frame received: 289
+frame received: 290
+frame received: 291
+frame received: 292
+frame received: 293
+frame received: 294
+frame received: 295
+frame received: 296
+frame received: 297
+frame received: 298
+frame received: 299
+Frame added: 218
+Frame added: 219
+Frame added: 220
+Frame added: 221
+Frame added: 222
+Frame added: 223
+Frame added: 224
+Frame added: 225
+Frame added: 226
+Frame added: 227
+Frame added: 228
+Frame added: 229
+Frame added: 230
+Frame added: 231
+Frame added: 232
+Frame added: 233
+Frame added: 234
+Frame added: 235
+Frame added: 236
+Frame added: 237
+Frame added: 238
+Frame added: 239
+Frame added: 240
+Frame added: 241
+Frame added: 242
+Frame added: 243
+Frame added: 244
+Frame added: 245
+Frame added: 246
+Frame added: 247
+Frame added: 248
+Frame added: 249
+Frame added: 250
+Frame added: 251
+Frame added: 252
+Frame added: 253
+Frame added: 254
+Frame added: 255
+Frame added: 256
+Frame added: 257
+Frame added: 258
+Frame added: 259
+Frame added: 260
+Frame added: 261
+Frame added: 262
+Frame added: 263
+Frame added: 264
+Frame added: 265
+Frame added: 266
+Frame added: 267
+Frame added: 268
+Frame added: 269
+Frame added: 270
+Frame added: 271
+Frame added: 272
+Frame added: 273
+Frame added: 274
+Frame added: 275
+Frame added: 276
+Frame added: 277
+Frame added: 278
+Frame added: 279
+Frame added: 280
+Frame added: 281
+Frame added: 282
+Frame added: 283
+Frame added: 284
+Frame added: 285
+Frame added: 286
+Frame added: 287
+Frame added: 288
+Frame added: 289
+Frame added: 290
+Frame added: 291
+Frame added: 292
+Frame added: 293
+Frame added: 294
+Frame added: 295
+Frame added: 296
+Frame added: 297
+Frame added: 298
+Frame added: 299
+lastReceivedFrame: 299
+Player: 1, lastProcessedFrame: 218, X: 234.4607869897838, Y: 221.08143117978383
+Player: 1, lastProcessedFrame: 219, X: 235.6058027519596, Y: 222.22644694195964
+Player: 1, lastProcessedFrame: 220, X: 236.74480566697693, Y: 223.36544985697697
+Player: 1, lastProcessedFrame: 221, X: 237.88529738117992, Y: 224.50594157117996
+Player: 1, lastProcessedFrame: 222, X: 239.02683760038911, Y: 225.64748179038915
+Player: 1, lastProcessedFrame: 223, X: 240.16907204289393, Y: 226.78971623289397
+Player: 1, lastProcessedFrame: 224, X: 241.3114045186829, Y: 227.93204870868294
+Player: 1, lastProcessedFrame: 225, X: 242.45454897225977, Y: 229.0751931622598
+Player: 1, lastProcessedFrame: 226, X: 243.59821620402212, Y: 230.21886039402216
+Player: 1, lastProcessedFrame: 227, X: 244.74315336420813, Y: 231.36379755420816
+Player: 1, lastProcessedFrame: 228, X: 245.8874091068023, Y: 232.50805329680233
+Player: 1, lastProcessedFrame: 229, X: 247.03210669921086, Y: 233.6527508892109
+Player: 1, lastProcessedFrame: 230, X: 248.18359219144966, Y: 234.8042363814497
+Player: 1, lastProcessedFrame: 231, X: 249.3345065323281, Y: 235.95515072232814
+Player: 1, lastProcessedFrame: 232, X: 250.4859416785641, Y: 237.10658586856414
+Player: 1, lastProcessedFrame: 233, X: 251.63766409400102, Y: 238.25830828400106
+Player: 1, lastProcessedFrame: 234, X: 252.78252899494507, Y: 239.4031731849451
+Player: 1, lastProcessedFrame: 235, X: 253.9281613047366, Y: 240.54880549473663
+Player: 1, lastProcessedFrame: 236, X: 255.0759402846498, Y: 241.69658447464982
+Player: 1, lastProcessedFrame: 237, X: 256.22412884202384, Y: 242.84477303202388
+Player: 1, lastProcessedFrame: 238, X: 257.37141118548925, Y: 243.99205537548931
+Player: 1, lastProcessedFrame: 239, X: 258.5128042345641, Y: 245.13344842456414
+Player: 1, lastProcessedFrame: 240, X: 259.6562390332564, Y: 246.27688322325645
+Player: 1, lastProcessedFrame: 241, X: 260.80022512067956, Y: 247.42086931067962
+Player: 1, lastProcessedFrame: 242, X: 261.94394023771315, Y: 248.56458442771319
+Player: 1, lastProcessedFrame: 243, X: 263.08875695640114, Y: 249.70940114640115
+Player: 1, lastProcessedFrame: 244, X: 264.2404416476913, Y: 250.8610858376913
+Player: 1, lastProcessedFrame: 245, X: 265.3939133463099, Y: 252.01455753630992
+Player: 1, lastProcessedFrame: 246, X: 266.54247786528845, Y: 253.16312205528848
+Player: 1, lastProcessedFrame: 247, X: 267.6901166895666, Y: 254.3107608795666
+Player: 1, lastProcessedFrame: 248, X: 268.83752395758705, Y: 255.45816814758706
+Player: 1, lastProcessedFrame: 249, X: 269.99152651662166, Y: 256.61217070662167
+Player: 1, lastProcessedFrame: 250, X: 271.14398882031014, Y: 257.76463301031015
+Player: 1, lastProcessedFrame: 251, X: 272.2962282085859, Y: 258.91687239858584
+Player: 1, lastProcessedFrame: 252, X: 273.44156927523636, Y: 260.06221346523637
+Player: 1, lastProcessedFrame: 253, X: 274.58589978730157, Y: 261.20654397730164
+Player: 1, lastProcessedFrame: 254, X: 275.7305559149685, Y: 262.35120010496854
+Player: 1, lastProcessedFrame: 255, X: 276.865477635919, Y: 263.48612182591904
+Player: 1, lastProcessedFrame: 256, X: 278.0032222756324, Y: 264.62386646563243
+Player: 1, lastProcessedFrame: 257, X: 279.14164653688647, Y: 265.7622907268865
+Player: 1, lastProcessedFrame: 258, X: 280.2803135337563, Y: 266.90095772375633
+Player: 1, lastProcessedFrame: 259, X: 281.4180721388287, Y: 268.0387163288287
+Player: 1, lastProcessedFrame: 260, X: 282.55567786741494, Y: 269.17632205741495
+Player: 1, lastProcessedFrame: 261, X: 283.69287467614964, Y: 270.3135188661496
+Player: 1, lastProcessedFrame: 262, X: 284.8297513493602, Y: 271.45039553936016
+Player: 1, lastProcessedFrame: 263, X: 285.96664800540844, Y: 272.5872921954084
+Player: 1, lastProcessedFrame: 264, X: 287.10332718369506, Y: 273.723971373695
+Player: 1, lastProcessedFrame: 265, X: 288.2691279890794, Y: 274.88977217907933
+Player 1 must be at (288.2691279890794, 274.88977217907933) in frame 265
+Player: 1, lastProcessedFrame: 266, X: 289.44030124329475, Y: 276.0609454332947
+Player: 1, lastProcessedFrame: 267, X: 290.6127674564016, Y: 277.2334116464016
+Player: 1, lastProcessedFrame: 268, X: 291.7854338302251, Y: 278.40607802022504
+Player: 1, lastProcessedFrame: 269, X: 292.9508888038249, Y: 279.57153299382486
+Player: 1, lastProcessedFrame: 270, X: 294.1162445067037, Y: 280.73688869670366
+Player: 1, lastProcessedFrame: 271, X: 295.281827473702, Y: 281.90247166370193
+Player: 1, lastProcessedFrame: 272, X: 296.45473644171994, Y: 283.0753806317199
+Player: 1, lastProcessedFrame: 273, X: 297.620547959772, Y: 284.24119214977196
+Player: 1, lastProcessedFrame: 274, X: 298.78680708348764, Y: 285.4074512734876
+Player: 1, lastProcessedFrame: 275, X: 299.9310817270461, Y: 286.55172591704604
+Player: 1, lastProcessedFrame: 276, X: 301.06295390858133, Y: 287.6835980985813
+Player: 1, lastProcessedFrame: 277, X: 301.06295390858133, Y: 289.2825800185813
+Player: 1, lastProcessedFrame: 278, X: 301.06295390858133, Y: 290.8815284885813
+Player: 1, lastProcessedFrame: 279, X: 301.06295390858133, Y: 292.4820718985813
+frame received: 266
+frame received: 267
+frame received: 268
+frame received: 269
+frame received: 270
+frame received: 271
+frame received: 272
+frame received: 273
+frame received: 274
+frame received: 275
+frame received: 276
+frame received: 277
+frame received: 278
+frame received: 279
+frame received: 280
+frame received: 281
+frame received: 282
+frame received: 283
+frame received: 284
+frame received: 285
+frame received: 286
+frame received: 287
+frame received: 288
+frame received: 289
+frame received: 290
+frame received: 291
+frame received: 292
+frame received: 293
+frame received: 294
+frame received: 295
+frame received: 296
+frame received: 297
+frame received: 298
+frame received: 299
+frame received: 300
+frame received: 301
+frame received: 302
+frame received: 303
+frame received: 304
+frame received: 305
+frame received: 306
+frame received: 307
+frame received: 308
+frame received: 309
+frame received: 310
+frame received: 311
+frame received: 312
+frame received: 313
+frame received: 314
+frame received: 315
+frame received: 316
+frame received: 317
+frame received: 318
+frame received: 319
+frame received: 320
+frame received: 321
+frame received: 322
+frame received: 323
+frame received: 324
+frame received: 325
+Frame ignored: 266
+Frame ignored: 267
+Frame ignored: 268
+Frame ignored: 269
+Frame ignored: 270
+Frame ignored: 271
+Frame ignored: 272
+Frame ignored: 273
+Frame ignored: 274
+Frame ignored: 275
+Frame ignored: 276
+Frame ignored: 277
+Frame ignored: 278
+Frame ignored: 279
+Frame ignored: 280
+Frame ignored: 281
+Frame ignored: 282
+Frame ignored: 283
+Frame ignored: 284
+Frame ignored: 285
+Frame ignored: 286
+Frame ignored: 287
+Frame ignored: 288
+Frame ignored: 289
+Frame ignored: 290
+Frame ignored: 291
+Frame ignored: 292
+Frame ignored: 293
+Frame ignored: 294
+Frame ignored: 295
+Frame ignored: 296
+Frame ignored: 297
+Frame ignored: 298
+Frame ignored: 299
+Frame added: 300
+Frame added: 301
+Frame added: 302
+Frame added: 303
+Frame added: 304
+Frame added: 305
+Frame added: 306
+Frame added: 307
+Frame added: 308
+Frame added: 309
+Frame added: 310
+Frame added: 311
+Frame added: 312
+Frame added: 313
+Frame added: 314
+Frame added: 315
+Frame added: 316
+Frame added: 317
+Frame added: 318
+Frame added: 319
+Frame added: 320
+Frame added: 321
+Frame added: 322
+Frame added: 323
+Frame added: 324
+Frame added: 325
+lastReceivedFrame: 325
+Player: 1, lastProcessedFrame: 280, X: 301.06295390858133, Y: 294.0830562185813
+Player: 1, lastProcessedFrame: 281, X: 301.06295390858133, Y: 295.6855829685813
+Player: 1, lastProcessedFrame: 282, X: 301.06295390858133, Y: 297.2778223385813
+Player: 1, lastProcessedFrame: 283, X: 301.06295390858133, Y: 298.89509614858133
+Player: 1, lastProcessedFrame: 284, X: 301.06295390858133, Y: 300.5123441885813
+Player: 1, lastProcessedFrame: 285, X: 301.06295390858133, Y: 302.13059686858134
+Player: 1, lastProcessedFrame: 286, X: 301.06295390858133, Y: 303.75856821858133
+Player: 1, lastProcessedFrame: 287, X: 301.06295390858133, Y: 305.3753252685813
+Player: 1, lastProcessedFrame: 288, X: 301.06295390858133, Y: 306.9917511185813
+Player: 1, lastProcessedFrame: 289, X: 301.06295390858133, Y: 308.6169541785813
+Player: 1, lastProcessedFrame: 290, X: 301.06295390858133, Y: 310.2424714485813
+Player: 1, lastProcessedFrame: 291, X: 301.06295390858133, Y: 311.8568298185813
+Player: 1, lastProcessedFrame: 292, X: 301.06295390858133, Y: 313.48084258858125
+Player: 1, lastProcessedFrame: 293, X: 301.06295390858133, Y: 315.08952881858124
+Player: 1, lastProcessedFrame: 294, X: 301.06295390858133, Y: 316.68768860858125
+Player: 1, lastProcessedFrame: 295, X: 301.06295390858133, Y: 318.28545957858125
+Player: 1, lastProcessedFrame: 296, X: 301.06295390858133, Y: 319.8833212185813
+Player: 1, lastProcessedFrame: 297, X: 301.06295390858133, Y: 321.49165841858127
+Player: 1, lastProcessedFrame: 298, X: 301.06295390858133, Y: 323.09964039858124
+Player: 1, lastProcessedFrame: 299, X: 301.06295390858133, Y: 324.7081873085813
+Player: 1, lastProcessedFrame: 300, X: 301.06295390858133, Y: 326.31800491858127
+Player: 1, lastProcessedFrame: 301, X: 301.06295390858133, Y: 327.93841891858125
+Player: 1, lastProcessedFrame: 302, X: 301.06295390858133, Y: 329.5588277485813
+Player: 1, lastProcessedFrame: 303, X: 301.06295390858133, Y: 331.1796264285813
+Player: 1, lastProcessedFrame: 304, X: 301.06295390858133, Y: 332.8010513885813
+Player: 1, lastProcessedFrame: 305, X: 301.06295390858133, Y: 334.4218106385813
+Player: 1, lastProcessedFrame: 306, X: 301.06295390858133, Y: 336.0436890085813
+Player: 1, lastProcessedFrame: 307, X: 301.06295390858133, Y: 337.65570866858127
+Player: 1, lastProcessedFrame: 308, X: 301.06295390858133, Y: 339.2700558085813
+Player: 1, lastProcessedFrame: 309, X: 301.06295390858133, Y: 340.8758515485813
+Player: 1, lastProcessedFrame: 310, X: 301.06295390858133, Y: 342.4811189185813
+Player: 1, lastProcessedFrame: 311, X: 301.06295390858133, Y: 344.0875738185813
+Player: 1, lastProcessedFrame: 312, X: 301.06295390858133, Y: 345.6962273085813
+Player: 1, lastProcessedFrame: 313, X: 301.06295390858133, Y: 347.3052390885813
+Player: 1, lastProcessedFrame: 314, X: 301.06295390858133, Y: 348.9146563585813
+Player: 1, lastProcessedFrame: 315, X: 301.06295390858133, Y: 350.5238109385813
+Player: 1, lastProcessedFrame: 316, X: 301.06295390858133, Y: 352.1327748785813
+Player: 1, lastProcessedFrame: 317, X: 301.06295390858133, Y: 353.7427138685813
+Player: 1, lastProcessedFrame: 318, X: 301.06295390858133, Y: 355.3516112385813
+Player: 1, lastProcessedFrame: 319, X: 301.06295390858133, Y: 356.9686749885813
+Player: 1, lastProcessedFrame: 320, X: 301.06295390858133, Y: 358.5745097585813
+Player: 1, lastProcessedFrame: 321, X: 301.06295390858133, Y: 360.17824760858133
+Player: 1, lastProcessedFrame: 322, X: 301.06295390858133, Y: 361.78024879858134
+Player: 1, lastProcessedFrame: 323, X: 301.06295390858133, Y: 363.38173213858136
+Player: 1, lastProcessedFrame: 324, X: 301.06295390858133, Y: 364.9923249685814
+Player: 1, lastProcessedFrame: 325, X: 301.06295390858133, Y: 366.6028327185814
+Player 1 must be at (301.06295390858133, 366.6028327185814) in frame 325
+frame received: 326
+frame received: 327
+frame received: 328
+frame received: 329
+frame received: 330
+frame received: 331
+frame received: 332
+frame received: 333
+frame received: 334
+frame received: 335
+frame received: 336
+frame received: 337
+frame received: 338
+frame received: 339
+frame received: 340
+frame received: 341
+frame received: 342
+frame received: 343
+frame received: 344
+frame received: 345
+frame received: 346
+frame received: 347
+frame received: 348
+frame received: 349
+frame received: 350
+frame received: 351
+frame received: 352
+frame received: 353
+frame received: 354
+frame received: 355
+frame received: 356
+frame received: 357
+frame received: 358
+frame received: 359
+frame received: 360
+frame received: 361
+frame received: 362
+frame received: 363
+frame received: 364
+frame received: 365
+frame received: 366
+frame received: 367
+frame received: 368
+frame received: 369
+frame received: 370
+frame received: 371
+frame received: 372
+frame received: 373
+frame received: 374
+frame received: 375
+frame received: 376
+frame received: 377
+frame received: 378
+frame received: 379
+frame received: 380
+frame received: 381
+frame received: 382
+frame received: 383
+frame received: 384
+frame received: 385
+frame received: 386
+frame received: 387
+frame received: 388
+frame received: 389
+frame received: 390
+frame received: 391
+frame received: 392
+frame received: 393
+frame received: 394
+frame received: 395
+frame received: 396
+frame received: 397
+frame received: 398
+frame received: 399
+frame received: 400
+frame received: 401
+frame received: 402
+frame received: 403
+frame received: 404
+frame received: 405
+frame received: 406
+frame received: 407
+frame received: 408
+frame received: 409
+frame received: 410
+frame received: 411
+frame received: 412
+frame received: 413
+frame received: 414
+frame received: 415
+frame received: 416
+frame received: 417
+frame received: 418
+frame received: 419
+Frame added: 326
+Frame added: 327
+Frame added: 328
+Frame added: 329
+Frame added: 330
+Frame added: 331
+Frame added: 332
+Frame added: 333
+Frame added: 334
+Frame added: 335
+Frame added: 336
+Frame added: 337
+Frame added: 338
+Frame added: 339
+Frame added: 340
+Frame added: 341
+Frame added: 342
+Frame added: 343
+Frame added: 344
+Frame added: 345
+Frame added: 346
+Frame added: 347
+Frame added: 348
+Frame added: 349
+Frame added: 350
+Frame added: 351
+Frame added: 352
+Frame added: 353
+Frame added: 354
+Frame added: 355
+Frame added: 356
+Frame added: 357
+Frame added: 358
+Frame added: 359
+Frame added: 360
+Frame added: 361
+Frame added: 362
+Frame added: 363
+Frame added: 364
+Frame added: 365
+Frame added: 366
+Frame added: 367
+Frame added: 368
+Frame added: 369
+Frame added: 370
+Frame added: 371
+Frame added: 372
+Frame added: 373
+Frame added: 374
+Frame added: 375
+Frame added: 376
+Frame added: 377
+Frame added: 378
+Frame added: 379
+Frame added: 380
+Frame added: 381
+Frame added: 382
+Frame added: 383
+Frame added: 384
+Frame added: 385
+Frame added: 386
+Frame added: 387
+Frame added: 388
+Frame added: 389
+Frame added: 390
+Frame added: 391
+Frame added: 392
+Frame added: 393
+Frame added: 394
+Frame added: 395
+Frame added: 396
+Frame added: 397
+Frame added: 398
+Frame added: 399
+Frame added: 400
+Frame added: 401
+Frame added: 402
+Frame added: 403
+Frame added: 404
+Frame added: 405
+Frame added: 406
+Frame added: 407
+Frame added: 408
+Frame added: 409
+Frame added: 410
+Frame added: 411
+Frame added: 412
+Frame added: 413
+Frame added: 414
+Frame added: 415
+Frame added: 416
+Frame added: 417
+Frame added: 418
+Frame added: 419
+lastReceivedFrame: 419
+Player: 1, lastProcessedFrame: 326, X: 301.06295390858133, Y: 368.2077023185814
+Player: 1, lastProcessedFrame: 327, X: 301.06295390858133, Y: 369.81437907858145
+Player: 1, lastProcessedFrame: 328, X: 301.06295390858133, Y: 371.42232179858144
+Player: 1, lastProcessedFrame: 329, X: 301.06295390858133, Y: 373.02090551858146
+Player: 1, lastProcessedFrame: 330, X: 301.06295390858133, Y: 374.62114067858147
+Player: 1, lastProcessedFrame: 331, X: 301.06295390858133, Y: 376.2223326685815
+Player: 1, lastProcessedFrame: 332, X: 301.06295390858133, Y: 377.8246368985815
+Player: 1, lastProcessedFrame: 333, X: 301.06295390858133, Y: 379.4284450385815
+Player: 1, lastProcessedFrame: 334, X: 301.06295390858133, Y: 381.0437162485815
+Player: 1, lastProcessedFrame: 335, X: 301.06295390858133, Y: 382.6605705385815
+Player: 1, lastProcessedFrame: 336, X: 301.06295390858133, Y: 384.2683971485815
+Player: 1, lastProcessedFrame: 337, X: 301.06295390858133, Y: 385.87586022858153
+Player: 1, lastProcessedFrame: 338, X: 301.06295390858133, Y: 387.48324313858154
+Player: 1, lastProcessedFrame: 339, X: 301.06295390858133, Y: 389.10064497858156
+Player: 1, lastProcessedFrame: 340, X: 301.06295390858133, Y: 390.70746505858153
+Player: 1, lastProcessedFrame: 341, X: 301.06295390858133, Y: 392.31411012858155
+Player: 1, lastProcessedFrame: 342, X: 301.06295390858133, Y: 393.92033248858155
+Player: 1, lastProcessedFrame: 343, X: 301.06295390858133, Y: 395.5263378985816
+Player: 1, lastProcessedFrame: 344, X: 301.06295390858133, Y: 397.12196698858156
+Player: 1, lastProcessedFrame: 345, X: 301.06295390858133, Y: 398.7175412485816
+Player: 1, lastProcessedFrame: 346, X: 301.06295390858133, Y: 400.3243720585816
+Player: 1, lastProcessedFrame: 347, X: 301.06295390858133, Y: 401.9221931985816
+Player: 1, lastProcessedFrame: 348, X: 301.06295390858133, Y: 403.5200107385816
+Player: 1, lastProcessedFrame: 349, X: 301.06295390858133, Y: 405.1184635985816
+Player: 1, lastProcessedFrame: 350, X: 301.06295390858133, Y: 406.7180827785816
+Player: 1, lastProcessedFrame: 351, X: 301.06295390858133, Y: 408.31772276858163
+Player: 1, lastProcessedFrame: 352, X: 301.06295390858133, Y: 409.94315680858165
+Player: 1, lastProcessedFrame: 353, X: 301.06295390858133, Y: 411.5716963585817
+Player: 1, lastProcessedFrame: 354, X: 301.06295390858133, Y: 413.20124391858167
+Player: 1, lastProcessedFrame: 355, X: 301.06295390858133, Y: 414.83140626858165
+Player: 1, lastProcessedFrame: 356, X: 301.06295390858133, Y: 416.46106970858165
+Player: 1, lastProcessedFrame: 357, X: 301.06295390858133, Y: 418.0909906385817
+Player: 1, lastProcessedFrame: 358, X: 301.06295390858133, Y: 419.7209113385817
+Player: 1, lastProcessedFrame: 359, X: 301.06295390858133, Y: 421.3502504585817
+Player: 1, lastProcessedFrame: 360, X: 301.06295390858133, Y: 422.9889854185817
+Player: 1, lastProcessedFrame: 361, X: 301.06295390858133, Y: 424.6282164985817
+Player: 1, lastProcessedFrame: 362, X: 301.06295390858133, Y: 426.2422484285817
+Player: 1, lastProcessedFrame: 363, X: 301.06295390858133, Y: 427.87791974858175
+Player: 1, lastProcessedFrame: 364, X: 301.06295390858133, Y: 429.52340496858176
+Player: 1, lastProcessedFrame: 365, X: 301.06295390858133, Y: 431.16786890858174
+Player: 1, lastProcessedFrame: 366, X: 301.06295390858133, Y: 432.80153326858175
+Player: 1, lastProcessedFrame: 367, X: 301.06295390858133, Y: 434.44414097858174
+Player: 1, lastProcessedFrame: 368, X: 301.06295390858133, Y: 436.08701661858174
+Player: 1, lastProcessedFrame: 369, X: 301.06295390858133, Y: 437.72942185858176
+Player: 1, lastProcessedFrame: 370, X: 301.06295390858133, Y: 439.37194032858173
+Player: 1, lastProcessedFrame: 371, X: 301.06295390858133, Y: 441.0141944085817
+Player: 1, lastProcessedFrame: 372, X: 299.9016163399866, Y: 442.17553197717643
+Player 1 must be at (299.9016163399866, 442.17553197717643) in frame 372
+Player: 1, lastProcessedFrame: 373, X: 298.7561517842079, Y: 443.3209965329552
+Player: 1, lastProcessedFrame: 374, X: 297.61143126739745, Y: 444.4657170497656
+Player: 1, lastProcessedFrame: 375, X: 296.46676096931066, Y: 445.6103873478524
+Player: 1, lastProcessedFrame: 376, X: 295.31563915623155, Y: 446.7615091609315
+Player: 1, lastProcessedFrame: 377, X: 294.16450900636346, Y: 447.9126393107996
+Player: 1, lastProcessedFrame: 378, X: 293.0127655120734, Y: 449.0643828050897
+Player: 1, lastProcessedFrame: 379, X: 291.8608759719487, Y: 450.21627234521435
+Player: 1, lastProcessedFrame: 380, X: 290.7165601323492, Y: 451.3605881848139
+Player: 1, lastProcessedFrame: 381, X: 289.57229142141665, Y: 452.5048568957464
+Player: 1, lastProcessedFrame: 382, X: 288.42746899637694, Y: 453.6496793207861
+Player: 1, lastProcessedFrame: 383, X: 287.28423025718183, Y: 454.7929180599812
+Player: 1, lastProcessedFrame: 384, X: 286.14080325787734, Y: 455.9363450592857
+Player: 1, lastProcessedFrame: 385, X: 284.99767581728963, Y: 457.0794724998734
+Player: 1, lastProcessedFrame: 386, X: 283.85388030221503, Y: 458.223268014948
+frame received: 373
+frame received: 374
+frame received: 375
+frame received: 376
+frame received: 377
+frame received: 378
+frame received: 379
+frame received: 380
+frame received: 381
+frame received: 382
+frame received: 383
+frame received: 384
+frame received: 385
+frame received: 386
+frame received: 387
+frame received: 388
+frame received: 389
+frame received: 390
+frame received: 391
+frame received: 392
+frame received: 393
+frame received: 394
+frame received: 395
+frame received: 396
+frame received: 397
+frame received: 398
+frame received: 399
+frame received: 400
+frame received: 401
+frame received: 402
+frame received: 403
+frame received: 404
+frame received: 405
+frame received: 406
+frame received: 407
+frame received: 408
+frame received: 409
+frame received: 410
+frame received: 411
+frame received: 412
+frame received: 413
+frame received: 414
+frame received: 415
+frame received: 416
+frame received: 417
+frame received: 418
+frame received: 419
+frame received: 420
+frame received: 421
+frame received: 422
+frame received: 423
+frame received: 424
+frame received: 425
+frame received: 426
+frame received: 427
+frame received: 428
+frame received: 429
+frame received: 430
+frame received: 431
+frame received: 432
+Frame ignored: 373
+Frame ignored: 374
+Frame ignored: 375
+Frame ignored: 376
+Frame ignored: 377
+Frame ignored: 378
+Frame ignored: 379
+Frame ignored: 380
+Frame ignored: 381
+Frame ignored: 382
+Frame ignored: 383
+Frame ignored: 384
+Frame ignored: 385
+Frame ignored: 386
+Frame ignored: 387
+Frame ignored: 388
+Frame ignored: 389
+Frame ignored: 390
+Frame ignored: 391
+Frame ignored: 392
+Frame ignored: 393
+Frame ignored: 394
+Frame ignored: 395
+Frame ignored: 396
+Frame ignored: 397
+Frame ignored: 398
+Frame ignored: 399
+Frame ignored: 400
+Frame ignored: 401
+Frame ignored: 402
+Frame ignored: 403
+Frame ignored: 404
+Frame ignored: 405
+Frame ignored: 406
+Frame ignored: 407
+Frame ignored: 408
+Frame ignored: 409
+Frame ignored: 410
+Frame ignored: 411
+Frame ignored: 412
+Frame ignored: 413
+Frame ignored: 414
+Frame ignored: 415
+Frame ignored: 416
+Frame ignored: 417
+Frame ignored: 418
+Frame ignored: 419
+Frame added: 420
+Frame added: 421
+Frame added: 422
+Frame added: 423
+Frame added: 424
+Frame added: 425
+Frame added: 426
+Frame added: 427
+Frame added: 428
+Frame added: 429
+Frame added: 430
+Frame added: 431
+Frame added: 432
+lastReceivedFrame: 432
+Player: 1, lastProcessedFrame: 387, X: 282.7133343104955, Y: 459.36381400666755
+Player: 1, lastProcessedFrame: 388, X: 281.5716935689863, Y: 460.50545474817676
+Player: 1, lastProcessedFrame: 389, X: 280.4298393731531, Y: 461.64730894401
+Player: 1, lastProcessedFrame: 390, X: 279.27897477723667, Y: 462.7981735399264
+Player: 1, lastProcessedFrame: 391, X: 278.13545584697954, Y: 463.9416924701835
+Player: 1, lastProcessedFrame: 392, X: 276.9919394269515, Y: 465.08520889021156
+Player: 1, lastProcessedFrame: 393, X: 275.8476915685979, Y: 466.22945674856516
+Player: 1, lastProcessedFrame: 394, X: 274.70691913300277, Y: 467.3702291841603
+Player: 1, lastProcessedFrame: 395, X: 273.56529875616883, Y: 468.5118495609942
+Player: 1, lastProcessedFrame: 396, X: 272.4306201243876, Y: 469.64652819277546
+Player: 1, lastProcessedFrame: 397, X: 271.29256244850217, Y: 470.7845858686609
+Player: 1, lastProcessedFrame: 398, X: 270.15605328697006, Y: 471.921095030193
+Player: 1, lastProcessedFrame: 399, X: 269.0265396247481, Y: 473.0506086924149
+Player: 1, lastProcessedFrame: 400, X: 267.89870921607667, Y: 474.1784391010864
+Player: 1, lastProcessedFrame: 401, X: 266.7635826109363, Y: 475.3135657062267
+Player: 1, lastProcessedFrame: 402, X: 265.628930050182, Y: 476.4482182669809
+Player: 1, lastProcessedFrame: 403, X: 264.50216430390674, Y: 477.57498401325626
+Player: 1, lastProcessedFrame: 404, X: 263.37167511716945, Y: 478.70547319999355
+Player: 1, lastProcessedFrame: 405, X: 262.2412215968982, Y: 479.8359267202648
+Player: 1, lastProcessedFrame: 406, X: 261.10384101111106, Y: 480.97330730605194
+Player: 1, lastProcessedFrame: 407, X: 259.9664389929174, Y: 482.1107093242456
+Player: 1, lastProcessedFrame: 408, X: 258.82911848999345, Y: 483.2480298271695
+Player: 1, lastProcessedFrame: 409, X: 257.68437631450234, Y: 484.3927720026606
+Player: 1, lastProcessedFrame: 410, X: 256.53952045745405, Y: 485.5376278597089
+Player: 1, lastProcessedFrame: 411, X: 255.39465064211788, Y: 486.68249767504506
+Player: 1, lastProcessedFrame: 412, X: 254.25000437859057, Y: 487.82714393857236
+Player: 1, lastProcessedFrame: 413, X: 253.10541159354912, Y: 488.9717367236138
+Player: 1, lastProcessedFrame: 414, X: 251.961042614875, Y: 490.11610570228794
+Player: 1, lastProcessedFrame: 415, X: 250.816938193132, Y: 491.26021012403095
+Player: 1, lastProcessedFrame: 416, X: 249.67307395434932, Y: 492.4040743628136
+Player: 1, lastProcessedFrame: 417, X: 248.53628743725335, Y: 493.5408608799096
+Player: 1, lastProcessedFrame: 418, X: 247.39888614737967, Y: 494.67826216978324
+Player: 1, lastProcessedFrame: 419, X: 246.2666737272745, Y: 495.81047458988843
+Player: 1, lastProcessedFrame: 420, X: 245.13350158649055, Y: 496.94364673067236
+Player: 1, lastProcessedFrame: 421, X: 244.00030276656776, Y: 498.0768455505952
+Player: 1, lastProcessedFrame: 422, X: 242.87230716361006, Y: 499.2048411535529
+Player: 1, lastProcessedFrame: 423, X: 241.73667768534014, Y: 500.34047063182277
+Player: 1, lastProcessedFrame: 424, X: 240.600378216324, Y: 501.4767701008389
+Player: 1, lastProcessedFrame: 425, X: 239.46437820702968, Y: 502.6127701101332
+Player: 1, lastProcessedFrame: 426, X: 238.328364706138, Y: 503.7487836110249
+Player: 1, lastProcessedFrame: 427, X: 237.1855006133288, Y: 504.8916477038341
+Player: 1, lastProcessedFrame: 428, X: 236.04316253725412, Y: 506.0339857799088
+Player: 1, lastProcessedFrame: 429, X: 234.89485307169153, Y: 507.1822952454714
+Player: 1, lastProcessedFrame: 430, X: 233.7463376259236, Y: 508.3308106912393
+Player: 1, lastProcessedFrame: 431, X: 232.60466975272718, Y: 509.47247856443573
+Player: 1, lastProcessedFrame: 432, X: 231.4576850446481, Y: 510.61946327251485
+Player 1 must be at (231.4576850446481, 510.61946327251485) in frame 432
+frame received: 433
+frame received: 434
+frame received: 435
+frame received: 436
+frame received: 437
+frame received: 438
+frame received: 439
+frame received: 440
+frame received: 441
+frame received: 442
+frame received: 443
+frame received: 444
+frame received: 445
+frame received: 446
+frame received: 447
+frame received: 448
+frame received: 449
+frame received: 450
+frame received: 451
+frame received: 452
+frame received: 453
+frame received: 454
+frame received: 455
+frame received: 456
+frame received: 457
+frame received: 458
+frame received: 459
+frame received: 460
+frame received: 461
+frame received: 462
+frame received: 463
+frame received: 464
+frame received: 465
+frame received: 466
+frame received: 467
+frame received: 468
+frame received: 469
+frame received: 470
+frame received: 471
+frame received: 472
+frame received: 473
+frame received: 474
+frame received: 475
+frame received: 476
+frame received: 477
+frame received: 478
+frame received: 479
+frame received: 480
+frame received: 481
+frame received: 482
+frame received: 483
+frame received: 484
+frame received: 485
+frame received: 486
+frame received: 487
+frame received: 488
+frame received: 489
+frame received: 490
+frame received: 491
+frame received: 492
+frame received: 493
+frame received: 494
+frame received: 495
+frame received: 496
+frame received: 497
+frame received: 498
+frame received: 499
+frame received: 500
+frame received: 501
+frame received: 502
+frame received: 503
+frame received: 504
+frame received: 505
+frame received: 506
+frame received: 507
+frame received: 508
+frame received: 509
+frame received: 510
+frame received: 511
+frame received: 512
+frame received: 513
+frame received: 514
+frame received: 515
+frame received: 516
+frame received: 517
+frame received: 518
+frame received: 519
+frame received: 520
+frame received: 521
+frame received: 522
+frame received: 523
+frame received: 524
+frame received: 525
+frame received: 526
+frame received: 527
+frame received: 528
+frame received: 529
+frame received: 530
+frame received: 531
+frame received: 532
+frame received: 533
+frame received: 534
+frame received: 535
+frame received: 536
+frame received: 537
+frame received: 538
+frame received: 539
+Frame added: 433
+Frame added: 434
+Frame added: 435
+Frame added: 436
+Frame added: 437
+Frame added: 438
+Frame added: 439
+Frame added: 440
+Frame added: 441
+Frame added: 442
+Frame added: 443
+Frame added: 444
+Frame added: 445
+Frame added: 446
+Frame added: 447
+Frame added: 448
+Frame added: 449
+Frame added: 450
+Frame added: 451
+Frame added: 452
+Frame added: 453
+Frame added: 454
+Frame added: 455
+Frame added: 456
+Frame added: 457
+Frame added: 458
+Frame added: 459
+Frame added: 460
+Frame added: 461
+Frame added: 462
+Frame added: 463
+Frame added: 464
+Frame added: 465
+Frame added: 466
+Frame added: 467
+Frame added: 468
+Frame added: 469
+Frame added: 470
+Frame added: 471
+Frame added: 472
+Frame added: 473
+Frame added: 474
+Frame added: 475
+Frame added: 476
+Frame added: 477
+Frame added: 478
+Frame added: 479
+Frame added: 480
+Frame added: 481
+Frame added: 482
+Frame added: 483
+Frame added: 484
+Frame added: 485
+Frame added: 486
+Frame added: 487
+Frame added: 488
+Frame added: 489
+Frame added: 490
+Frame added: 491
+Frame added: 492
+Frame added: 493
+Frame added: 494
+Frame added: 495
+Frame added: 496
+Frame added: 497
+Frame added: 498
+Frame added: 499
+Frame added: 500
+Frame added: 501
+Frame added: 502
+Frame added: 503
+Frame added: 504
+Frame added: 505
+Frame added: 506
+Frame added: 507
+Frame added: 508
+Frame added: 509
+Frame added: 510
+Frame added: 511
+Frame added: 512
+Frame added: 513
+Frame added: 514
+Frame added: 515
+Frame added: 516
+Frame added: 517
+Frame added: 518
+Frame added: 519
+Frame added: 520
+Frame added: 521
+Frame added: 522
+Frame added: 523
+Frame added: 524
+Frame added: 525
+Frame added: 526
+Frame added: 527
+Frame added: 528
+Frame added: 529
+Frame added: 530
+Frame added: 531
+Frame added: 532
+Frame added: 533
+Frame added: 534
+Frame added: 535
+Frame added: 536
+Frame added: 537
+Frame added: 538
+Frame added: 539
+lastReceivedFrame: 539
+Player: 1, lastProcessedFrame: 433, X: 230.28307388676006, Y: 511.7940744304029
+Player: 1, lastProcessedFrame: 434, X: 229.10629831744126, Y: 512.9708499997216
+Player: 1, lastProcessedFrame: 435, X: 227.9281091850983, Y: 514.1490391320646
+Player: 1, lastProcessedFrame: 436, X: 226.74853886107965, Y: 515.3286094560832
+Player: 1, lastProcessedFrame: 437, X: 225.56828800335265, Y: 516.5088603138101
+Player: 1, lastProcessedFrame: 438, X: 224.38723584515014, Y: 517.6899124720126
+Player: 1, lastProcessedFrame: 439, X: 223.21477961639098, Y: 518.8623687007716
+Player: 1, lastProcessedFrame: 440, X: 222.04250396149055, Y: 520.0346443556721
+Player: 1, lastProcessedFrame: 441, X: 220.8700269296499, Y: 521.2071213875126
+Player: 1, lastProcessedFrame: 442, X: 219.71030594150727, Y: 522.3668423756553
+Player: 1, lastProcessedFrame: 443, X: 218.55869619646487, Y: 523.5184521206977
+Player: 1, lastProcessedFrame: 444, X: 217.40756763051598, Y: 524.6695806866466
+Player: 1, lastProcessedFrame: 445, X: 216.26417662294665, Y: 525.8129716942159
+Player: 1, lastProcessedFrame: 446, X: 215.12119261189844, Y: 526.9559557052642
+Player: 1, lastProcessedFrame: 447, X: 213.97744119907378, Y: 528.0997071180888
+Player: 1, lastProcessedFrame: 448, X: 212.8398289721762, Y: 529.2373193449863
+Player: 1, lastProcessedFrame: 449, X: 211.7017849575938, Y: 530.3753633595687
+Player: 1, lastProcessedFrame: 450, X: 210.56351601941532, Y: 531.5136322977472
+Player: 1, lastProcessedFrame: 451, X: 209.42525578572133, Y: 532.6518925314411
+Player: 1, lastProcessedFrame: 452, X: 208.2867018976522, Y: 533.7904464195103
+Player: 1, lastProcessedFrame: 453, X: 207.14816909550726, Y: 534.9289792216553
+Player: 1, lastProcessedFrame: 454, X: 206.01044284764123, Y: 536.0667054695213
+Player: 1, lastProcessedFrame: 455, X: 204.87226659701963, Y: 537.2048817201428
+Player: 1, lastProcessedFrame: 456, X: 203.73440997280528, Y: 538.3427383443571
+Player: 1, lastProcessedFrame: 457, X: 202.5973914751876, Y: 539.4797568419748
+Player: 1, lastProcessedFrame: 458, X: 201.4542359766028, Y: 540.6229123405595
+Player: 1, lastProcessedFrame: 459, X: 200.311810191003, Y: 541.7653381261593
+Player: 1, lastProcessedFrame: 460, X: 199.16940110726534, Y: 542.907747209897
+Player: 1, lastProcessedFrame: 461, X: 198.02695962389498, Y: 544.0501886932674
+Player: 1, lastProcessedFrame: 462, X: 196.88418316282917, Y: 545.1929651543331
+Player: 1, lastProcessedFrame: 463, X: 195.7488769808507, Y: 546.3282713363117
+Player: 1, lastProcessedFrame: 464, X: 194.61175871046618, Y: 547.4653896066961
+Player: 1, lastProcessedFrame: 465, X: 193.4671271830442, Y: 548.6100211341181
+Player: 1, lastProcessedFrame: 466, X: 192.32256500865532, Y: 549.754583308507
+Player: 1, lastProcessedFrame: 467, X: 191.17748629276278, Y: 550.8996620243995
+Player: 1, lastProcessedFrame: 468, X: 190.03141715361502, Y: 552.0457311635472
+Player: 1, lastProcessedFrame: 469, X: 188.8924139274707, Y: 553.1847343896915
+Player: 1, lastProcessedFrame: 470, X: 187.75389424215655, Y: 554.3232540750056
+Player: 1, lastProcessedFrame: 471, X: 186.61106429553382, Y: 555.4660840216284
+Player: 1, lastProcessedFrame: 472, X: 185.4679069584714, Y: 556.6092413586908
+Player: 1, lastProcessedFrame: 473, X: 184.31667473773945, Y: 557.7604735794228
+Player: 1, lastProcessedFrame: 474, X: 183.17447642132007, Y: 558.9026718958421
+Player: 1, lastProcessedFrame: 475, X: 182.03247422096644, Y: 560.0446740961958
+Player: 1, lastProcessedFrame: 476, X: 180.8881172560365, Y: 561.1890310611257
+Player: 1, lastProcessedFrame: 477, X: 179.74383576061334, Y: 562.3333125565488
+Player: 1, lastProcessedFrame: 478, X: 178.59992395475751, Y: 563.4772243624046
+Player: 1, lastProcessedFrame: 479, X: 177.44819405105977, Y: 564.6289542661024
+Player: 1, lastProcessedFrame: 480, X: 176.2958264289693, Y: 565.7813218881928
+Player 1 must be at (176.2958264289693, 565.7813218881928) in frame 480
+Player: 1, lastProcessedFrame: 481, X: 175.1451666111767, Y: 566.9319817059853
+Player: 1, lastProcessedFrame: 482, X: 174.00217660386298, Y: 568.0749717132991
+Player: 1, lastProcessedFrame: 483, X: 172.85907717177486, Y: 569.2180711453872
+Player: 1, lastProcessedFrame: 484, X: 171.7082643431459, Y: 570.3688839740162
+Player: 1, lastProcessedFrame: 485, X: 170.56453211412824, Y: 571.5126162030339
+Player: 1, lastProcessedFrame: 486, X: 169.4218904134728, Y: 572.6552579036893
+Player: 1, lastProcessedFrame: 487, X: 168.2788151856498, Y: 573.7983331315123
+Player: 1, lastProcessedFrame: 488, X: 167.13658375541985, Y: 574.9405645617422
+Player: 1, lastProcessedFrame: 489, X: 165.99501004056242, Y: 576.0821382765996
+Player: 1, lastProcessedFrame: 490, X: 164.85369600359934, Y: 577.2234523135627
+Player: 1, lastProcessedFrame: 491, X: 163.71524633599867, Y: 578.3619019811633
+Player: 1, lastProcessedFrame: 492, X: 162.57708163243083, Y: 579.5000666847312
+Player: 1, lastProcessedFrame: 493, X: 161.43964209515136, Y: 580.6375062220106
+Player: 1, lastProcessedFrame: 494, X: 160.30265260305384, Y: 581.7744957141082
+frame received: 481
+frame received: 482
+frame received: 483
+frame received: 484
+frame received: 485
+frame received: 486
+frame received: 487
+frame received: 488
+frame received: 489
+frame received: 490
+frame received: 491
+frame received: 492
+frame received: 493
+frame received: 494
+frame received: 495
+frame received: 496
+frame received: 497
+frame received: 498
+frame received: 499
+frame received: 500
+frame received: 501
+frame received: 502
+frame received: 503
+frame received: 504
+frame received: 505
+frame received: 506
+frame received: 507
+frame received: 508
+frame received: 509
+frame received: 510
+frame received: 511
+frame received: 512
+frame received: 513
+frame received: 514
+frame received: 515
+frame received: 516
+frame received: 517
+frame received: 518
+frame received: 519
+frame received: 520
+frame received: 521
+frame received: 522
+frame received: 523
+frame received: 524
+frame received: 525
+frame received: 526
+frame received: 527
+frame received: 528
+frame received: 529
+frame received: 530
+frame received: 531
+frame received: 532
+frame received: 533
+frame received: 534
+frame received: 535
+frame received: 536
+frame received: 537
+frame received: 538
+frame received: 539
+frame received: 540
+Frame ignored: 481
+Frame ignored: 482
+Frame ignored: 483
+Frame ignored: 484
+Frame ignored: 485
+Frame ignored: 486
+Frame ignored: 487
+Frame ignored: 488
+Frame ignored: 489
+Frame ignored: 490
+Frame ignored: 491
+Frame ignored: 492
+Frame ignored: 493
+Frame ignored: 494
+Frame ignored: 495
+Frame ignored: 496
+Frame ignored: 497
+Frame ignored: 498
+Frame ignored: 499
+Frame ignored: 500
+Frame ignored: 501
+Frame ignored: 502
+Frame ignored: 503
+Frame ignored: 504
+Frame ignored: 505
+Frame ignored: 506
+Frame ignored: 507
+Frame ignored: 508
+Frame ignored: 509
+Frame ignored: 510
+Frame ignored: 511
+Frame ignored: 512
+Frame ignored: 513
+Frame ignored: 514
+Frame ignored: 515
+Frame ignored: 516
+Frame ignored: 517
+Frame ignored: 518
+Frame ignored: 519
+Frame ignored: 520
+Frame ignored: 521
+Frame ignored: 522
+Frame ignored: 523
+Frame ignored: 524
+Frame ignored: 525
+Frame ignored: 526
+Frame ignored: 527
+Frame ignored: 528
+Frame ignored: 529
+Frame ignored: 530
+Frame ignored: 531
+Frame ignored: 532
+Frame ignored: 533
+Frame ignored: 534
+Frame ignored: 535
+Frame ignored: 536
+Frame ignored: 537
+Frame ignored: 538
+Frame ignored: 539
+Frame added: 540
+lastReceivedFrame: 540
+Player: 1, lastProcessedFrame: 495, X: 159.15880785920515, Y: 582.9183404579569
+Player: 1, lastProcessedFrame: 496, X: 158.02341963162684, Y: 584.0537286855352
+Player: 1, lastProcessedFrame: 497, X: 158.02341963162684, Y: 585.6579175155352
+Player: 1, lastProcessedFrame: 498, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 499, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 500, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 501, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 502, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 503, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 504, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 505, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 506, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 507, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 508, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 509, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 510, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 511, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 512, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 513, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 514, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 515, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 516, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 517, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 518, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 519, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 520, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 521, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 522, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 523, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 524, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 525, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 526, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 527, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 528, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 529, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 530, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 531, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 532, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 533, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 534, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 535, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 536, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 537, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 538, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 539, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 540, X: 158.02341963162684, Y: 587.2619889555352
+Player 1 must be at (158.02341963162684, 587.2619889555352) in frame 540
+frame received: 541
+frame received: 542
+frame received: 543
+frame received: 544
+frame received: 545
+frame received: 546
+frame received: 547
+frame received: 548
+frame received: 549
+frame received: 550
+frame received: 551
+frame received: 552
+frame received: 553
+frame received: 554
+frame received: 555
+frame received: 556
+frame received: 557
+frame received: 558
+frame received: 559
+frame received: 560
+frame received: 561
+frame received: 562
+frame received: 563
+frame received: 564
+frame received: 565
+frame received: 566
+frame received: 567
+frame received: 568
+frame received: 569
+frame received: 570
+frame received: 571
+frame received: 572
+frame received: 573
+frame received: 574
+frame received: 575
+frame received: 576
+frame received: 577
+frame received: 578
+frame received: 579
+frame received: 580
+frame received: 581
+frame received: 582
+frame received: 583
+frame received: 584
+frame received: 585
+frame received: 586
+frame received: 587
+frame received: 588
+frame received: 589
+frame received: 590
+frame received: 591
+frame received: 592
+frame received: 593
+frame received: 594
+frame received: 595
+frame received: 596
+frame received: 597
+frame received: 598
+frame received: 599
+frame received: 600
+frame received: 601
+frame received: 602
+frame received: 603
+frame received: 604
+frame received: 605
+frame received: 606
+frame received: 607
+frame received: 608
+frame received: 609
+frame received: 610
+frame received: 611
+frame received: 612
+frame received: 613
+frame received: 614
+frame received: 615
+frame received: 616
+frame received: 617
+frame received: 618
+frame received: 619
+frame received: 620
+frame received: 621
+frame received: 622
+frame received: 623
+frame received: 624
+frame received: 625
+frame received: 626
+frame received: 627
+frame received: 628
+frame received: 629
+frame received: 630
+frame received: 631
+frame received: 632
+frame received: 633
+frame received: 634
+frame received: 635
+frame received: 636
+frame received: 637
+frame received: 638
+frame received: 639
+frame received: 640
+frame received: 641
+frame received: 642
+frame received: 643
+frame received: 644
+frame received: 645
+frame received: 646
+frame received: 647
+frame received: 648
+frame received: 649
+frame received: 650
+frame received: 651
+frame received: 652
+frame received: 653
+frame received: 654
+frame received: 655
+frame received: 656
+frame received: 657
+frame received: 658
+frame received: 659
+Frame added: 541
+Frame added: 542
+Frame added: 543
+Frame added: 544
+Frame added: 545
+Frame added: 546
+Frame added: 547
+Frame added: 548
+Frame added: 549
+Frame added: 550
+Frame added: 551
+Frame added: 552
+Frame added: 553
+Frame added: 554
+Frame added: 555
+Frame added: 556
+Frame added: 557
+Frame added: 558
+Frame added: 559
+Frame added: 560
+Frame added: 561
+Frame added: 562
+Frame added: 563
+Frame added: 564
+Frame added: 565
+Frame added: 566
+Frame added: 567
+Frame added: 568
+Frame added: 569
+Frame added: 570
+Frame added: 571
+Frame added: 572
+Frame added: 573
+Frame added: 574
+Frame added: 575
+Frame added: 576
+Frame added: 577
+Frame added: 578
+Frame added: 579
+Frame added: 580
+Frame added: 581
+Frame added: 582
+Frame added: 583
+Frame added: 584
+Frame added: 585
+Frame added: 586
+Frame added: 587
+Frame added: 588
+Frame added: 589
+Frame added: 590
+Frame added: 591
+Frame added: 592
+Frame added: 593
+Frame added: 594
+Frame added: 595
+Frame added: 596
+Frame added: 597
+Frame added: 598
+Frame added: 599
+Frame added: 600
+Frame added: 601
+Frame added: 602
+Frame added: 603
+Frame added: 604
+Frame added: 605
+Frame added: 606
+Frame added: 607
+Frame added: 608
+Frame added: 609
+Frame added: 610
+Frame added: 611
+Frame added: 612
+Frame added: 613
+Frame added: 614
+Frame added: 615
+Frame added: 616
+Frame added: 617
+Frame added: 618
+Frame added: 619
+Frame added: 620
+Frame added: 621
+Frame added: 622
+Frame added: 623
+Frame added: 624
+Frame added: 625
+Frame added: 626
+Frame added: 627
+Frame added: 628
+Frame added: 629
+Frame added: 630
+Frame added: 631
+Frame added: 632
+Frame added: 633
+Frame added: 634
+Frame added: 635
+Frame added: 636
+Frame added: 637
+Frame added: 638
+Frame added: 639
+Frame added: 640
+Frame added: 641
+Frame added: 642
+Frame added: 643
+Frame added: 644
+Frame added: 645
+Frame added: 646
+Frame added: 647
+Frame added: 648
+Frame added: 649
+Frame added: 650
+Frame added: 651
+Frame added: 652
+Frame added: 653
+Frame added: 654
+Frame added: 655
+Frame added: 656
+Frame added: 657
+Frame added: 658
+Frame added: 659
+lastReceivedFrame: 659
+Player: 1, lastProcessedFrame: 541, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 542, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 543, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 544, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 545, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 546, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 547, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 548, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 549, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 550, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 551, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 552, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 553, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 554, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 555, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 556, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 557, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 558, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 559, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 560, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 561, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 562, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 563, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 564, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 565, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 566, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 567, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 568, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 569, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 570, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 571, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 572, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 573, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 574, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 575, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 576, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 577, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 578, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 579, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 580, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 581, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 582, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 583, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 584, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 585, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 586, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 587, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 588, X: 158.02341963162684, Y: 587.2619889555352
+Player 1 must be at (158.02341963162684, 587.2619889555352) in frame 588
+Player: 1, lastProcessedFrame: 589, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 590, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 591, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 592, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 593, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 594, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 595, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 596, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 597, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 598, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 599, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 600, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 601, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 602, X: 158.02341963162684, Y: 587.2619889555352
+frame received: 589
+frame received: 590
+frame received: 591
+frame received: 592
+frame received: 593
+frame received: 594
+frame received: 595
+frame received: 596
+frame received: 597
+frame received: 598
+frame received: 599
+frame received: 600
+frame received: 601
+frame received: 602
+frame received: 603
+frame received: 604
+frame received: 605
+frame received: 606
+frame received: 607
+frame received: 608
+frame received: 609
+frame received: 610
+frame received: 611
+frame received: 612
+frame received: 613
+frame received: 614
+frame received: 615
+frame received: 616
+frame received: 617
+frame received: 618
+frame received: 619
+frame received: 620
+frame received: 621
+frame received: 622
+frame received: 623
+frame received: 624
+frame received: 625
+frame received: 626
+frame received: 627
+frame received: 628
+frame received: 629
+frame received: 630
+frame received: 631
+frame received: 632
+frame received: 633
+frame received: 634
+frame received: 635
+frame received: 636
+frame received: 637
+frame received: 638
+frame received: 639
+frame received: 640
+frame received: 641
+frame received: 642
+frame received: 643
+frame received: 644
+frame received: 645
+frame received: 646
+frame received: 647
+frame received: 648
+Frame ignored: 589
+Frame ignored: 590
+Frame ignored: 591
+Frame ignored: 592
+Frame ignored: 593
+Frame ignored: 594
+Frame ignored: 595
+Frame ignored: 596
+Frame ignored: 597
+Frame ignored: 598
+Frame ignored: 599
+Frame ignored: 600
+Frame ignored: 601
+Frame ignored: 602
+Frame ignored: 603
+Frame ignored: 604
+Frame ignored: 605
+Frame ignored: 606
+Frame ignored: 607
+Frame ignored: 608
+Frame ignored: 609
+Frame ignored: 610
+Frame ignored: 611
+Frame ignored: 612
+Frame ignored: 613
+Frame ignored: 614
+Frame ignored: 615
+Frame ignored: 616
+Frame ignored: 617
+Frame ignored: 618
+Frame ignored: 619
+Frame ignored: 620
+Frame ignored: 621
+Frame ignored: 622
+Frame ignored: 623
+Frame ignored: 624
+Frame ignored: 625
+Frame ignored: 626
+Frame ignored: 627
+Frame ignored: 628
+Frame ignored: 629
+Frame ignored: 630
+Frame ignored: 631
+Frame ignored: 632
+Frame ignored: 633
+Frame ignored: 634
+Frame ignored: 635
+Frame ignored: 636
+Frame ignored: 637
+Frame ignored: 638
+Frame ignored: 639
+Frame ignored: 640
+Frame ignored: 641
+Frame ignored: 642
+Frame ignored: 643
+Frame ignored: 644
+Frame ignored: 645
+Frame ignored: 646
+Frame ignored: 647
+Frame ignored: 648
+lastReceivedFrame: 659
+Player: 1, lastProcessedFrame: 603, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 604, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 605, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 606, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 607, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 608, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 609, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 610, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 611, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 612, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 613, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 614, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 615, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 616, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 617, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 618, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 619, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 620, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 621, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 622, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 623, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 624, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 625, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 626, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 627, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 628, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 629, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 630, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 631, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 632, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 633, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 634, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 635, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 636, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 637, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 638, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 639, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 640, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 641, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 642, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 643, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 644, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 645, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 646, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 647, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 648, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 649, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 650, X: 158.02341963162684, Y: 587.2619889555352
+Player 1 must be at (158.02341963162684, 587.2619889555352) in frame 650
+Player: 1, lastProcessedFrame: 651, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 652, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 653, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 654, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 655, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 656, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 657, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 658, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 659, X: 158.02341963162684, Y: 587.2619889555352
+frame received: 651
+frame received: 652
+frame received: 653
+frame received: 654
+frame received: 655
+frame received: 656
+frame received: 657
+frame received: 658
+frame received: 659
+frame received: 660
+frame received: 661
+frame received: 662
+frame received: 663
+frame received: 664
+frame received: 665
+frame received: 666
+frame received: 667
+frame received: 668
+frame received: 669
+frame received: 670
+frame received: 671
+frame received: 672
+frame received: 673
+frame received: 674
+frame received: 675
+frame received: 676
+frame received: 677
+frame received: 678
+frame received: 679
+frame received: 680
+frame received: 681
+frame received: 682
+frame received: 683
+frame received: 684
+frame received: 685
+frame received: 686
+frame received: 687
+frame received: 688
+frame received: 689
+frame received: 690
+frame received: 691
+frame received: 692
+frame received: 693
+frame received: 694
+frame received: 695
+frame received: 696
+frame received: 697
+frame received: 698
+frame received: 699
+frame received: 700
+frame received: 701
+frame received: 702
+frame received: 703
+frame received: 704
+frame received: 705
+frame received: 706
+frame received: 707
+frame received: 708
+frame received: 709
+frame received: 710
+frame received: 711
+frame received: 712
+frame received: 713
+frame received: 714
+frame received: 715
+frame received: 716
+frame received: 717
+frame received: 718
+frame received: 719
+frame received: 720
+frame received: 721
+frame received: 722
+frame received: 723
+frame received: 724
+frame received: 725
+frame received: 726
+frame received: 727
+frame received: 728
+frame received: 729
+frame received: 730
+frame received: 731
+frame received: 732
+frame received: 733
+frame received: 734
+frame received: 735
+frame received: 736
+frame received: 737
+frame received: 738
+frame received: 739
+frame received: 740
+frame received: 741
+frame received: 742
+frame received: 743
+frame received: 744
+frame received: 745
+frame received: 746
+frame received: 747
+frame received: 748
+frame received: 749
+frame received: 750
+frame received: 751
+frame received: 752
+frame received: 753
+frame received: 754
+frame received: 755
+frame received: 756
+frame received: 757
+frame received: 758
+frame received: 759
+frame received: 760
+frame received: 761
+frame received: 762
+frame received: 763
+frame received: 764
+frame received: 765
+frame received: 766
+frame received: 767
+frame received: 768
+frame received: 769
+frame received: 770
+Frame ignored: 651
+Frame ignored: 652
+Frame ignored: 653
+Frame ignored: 654
+Frame ignored: 655
+Frame ignored: 656
+Frame ignored: 657
+Frame ignored: 658
+Frame ignored: 659
+Frame added: 660
+Frame added: 661
+Frame added: 662
+Frame added: 663
+Frame added: 664
+Frame added: 665
+Frame added: 666
+Frame added: 667
+Frame added: 668
+Frame added: 669
+Frame added: 670
+Frame added: 671
+Frame added: 672
+Frame added: 673
+Frame added: 674
+Frame added: 675
+Frame added: 676
+Frame added: 677
+Frame added: 678
+Frame added: 679
+Frame added: 680
+Frame added: 681
+Frame added: 682
+Frame added: 683
+Frame added: 684
+Frame added: 685
+Frame added: 686
+Frame added: 687
+Frame added: 688
+Frame added: 689
+Frame added: 690
+Frame added: 691
+Frame added: 692
+Frame added: 693
+Frame added: 694
+Frame added: 695
+Frame added: 696
+Frame added: 697
+Frame added: 698
+Frame added: 699
+Frame added: 700
+Frame added: 701
+Frame added: 702
+Frame added: 703
+Frame added: 704
+Frame added: 705
+Frame added: 706
+Frame added: 707
+Frame added: 708
+Frame added: 709
+Frame added: 710
+Frame added: 711
+Frame added: 712
+Frame added: 713
+Frame added: 714
+Frame added: 715
+Frame added: 716
+Frame added: 717
+Frame added: 718
+Frame added: 719
+Frame added: 720
+Frame added: 721
+Frame added: 722
+Frame added: 723
+Frame added: 724
+Frame added: 725
+Frame added: 726
+Frame added: 727
+Frame added: 728
+Frame added: 729
+Frame added: 730
+Frame added: 731
+Frame added: 732
+Frame added: 733
+Frame added: 734
+Frame added: 735
+Frame added: 736
+Frame added: 737
+Frame added: 738
+Frame added: 739
+Frame added: 740
+Frame added: 741
+Frame added: 742
+Frame added: 743
+Frame added: 744
+Frame added: 745
+Frame added: 746
+Frame added: 747
+Frame added: 748
+Frame added: 749
+Frame added: 750
+Frame added: 751
+Frame added: 752
+Frame added: 753
+Frame added: 754
+Frame added: 755
+Frame added: 756
+Frame added: 757
+Frame added: 758
+Frame added: 759
+Frame added: 760
+Frame added: 761
+Frame added: 762
+Frame added: 763
+Frame added: 764
+Frame added: 765
+Frame added: 766
+Frame added: 767
+Frame added: 768
+Frame added: 769
+Frame added: 770
+lastReceivedFrame: 770
+Player: 1, lastProcessedFrame: 660, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 661, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 662, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 663, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 664, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 665, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 666, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 667, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 668, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 669, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 670, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 671, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 672, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 673, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 674, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 675, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 676, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 677, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 678, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 679, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 680, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 681, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 682, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 683, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 684, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 685, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 686, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 687, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 688, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 689, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 690, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 691, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 692, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 693, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 694, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 695, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 696, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 697, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 698, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 699, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 700, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 701, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 702, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 703, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 704, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 705, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 706, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 707, X: 158.02341963162684, Y: 587.2619889555352
+Player 1 must be at (158.02341963162684, 587.2619889555352) in frame 707
+Player: 1, lastProcessedFrame: 708, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 709, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 710, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 711, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 712, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 713, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 714, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 715, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 716, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 717, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 718, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 719, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 720, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 721, X: 158.02341963162684, Y: 587.2619889555352
+frame received: 708
+frame received: 709
+frame received: 710
+frame received: 711
+frame received: 712
+frame received: 713
+frame received: 714
+frame received: 715
+frame received: 716
+frame received: 717
+frame received: 718
+frame received: 719
+frame received: 720
+frame received: 721
+frame received: 722
+frame received: 723
+frame received: 724
+frame received: 725
+frame received: 726
+frame received: 727
+frame received: 728
+frame received: 729
+frame received: 730
+frame received: 731
+frame received: 732
+frame received: 733
+frame received: 734
+frame received: 735
+frame received: 736
+frame received: 737
+frame received: 738
+frame received: 739
+frame received: 740
+frame received: 741
+frame received: 742
+frame received: 743
+frame received: 744
+frame received: 745
+frame received: 746
+frame received: 747
+frame received: 748
+frame received: 749
+frame received: 750
+frame received: 751
+frame received: 752
+frame received: 753
+frame received: 754
+frame received: 755
+frame received: 756
+frame received: 757
+frame received: 758
+frame received: 759
+frame received: 760
+frame received: 761
+frame received: 762
+frame received: 763
+frame received: 764
+frame received: 765
+frame received: 766
+frame received: 767
+frame received: 768
+frame received: 769
+frame received: 770
+frame received: 771
+frame received: 772
+frame received: 773
+frame received: 774
+frame received: 775
+frame received: 776
+Frame ignored: 708
+Frame ignored: 709
+Frame ignored: 710
+Frame ignored: 711
+Frame ignored: 712
+Frame ignored: 713
+Frame ignored: 714
+Frame ignored: 715
+Frame ignored: 716
+Frame ignored: 717
+Frame ignored: 718
+Frame ignored: 719
+Frame ignored: 720
+Frame ignored: 721
+Frame ignored: 722
+Frame ignored: 723
+Frame ignored: 724
+Frame ignored: 725
+Frame ignored: 726
+Frame ignored: 727
+Frame ignored: 728
+Frame ignored: 729
+Frame ignored: 730
+Frame ignored: 731
+Frame ignored: 732
+Frame ignored: 733
+Frame ignored: 734
+Frame ignored: 735
+Frame ignored: 736
+Frame ignored: 737
+Frame ignored: 738
+Frame ignored: 739
+Frame ignored: 740
+Frame ignored: 741
+Frame ignored: 742
+Frame ignored: 743
+Frame ignored: 744
+Frame ignored: 745
+Frame ignored: 746
+Frame ignored: 747
+Frame ignored: 748
+Frame ignored: 749
+Frame ignored: 750
+Frame ignored: 751
+Frame ignored: 752
+Frame ignored: 753
+Frame ignored: 754
+Frame ignored: 755
+Frame ignored: 756
+Frame ignored: 757
+Frame ignored: 758
+Frame ignored: 759
+Frame ignored: 760
+Frame ignored: 761
+Frame ignored: 762
+Frame ignored: 763
+Frame ignored: 764
+Frame ignored: 765
+Frame ignored: 766
+Frame ignored: 767
+Frame ignored: 768
+Frame ignored: 769
+Frame ignored: 770
+Frame added: 771
+Frame added: 772
+Frame added: 773
+Frame added: 774
+Frame added: 775
+Frame added: 776
+lastReceivedFrame: 776
+Player: 1, lastProcessedFrame: 722, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 723, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 724, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 725, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 726, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 727, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 728, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 729, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 730, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 731, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 732, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 733, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 734, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 735, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 736, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 737, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 738, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 739, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 740, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 741, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 742, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 743, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 744, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 745, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 746, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 747, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 748, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 749, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 750, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 751, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 752, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 753, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 754, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 755, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 756, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 757, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 758, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 759, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 760, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 761, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 762, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 763, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 764, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 765, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 766, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 767, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 768, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 769, X: 158.02341963162684, Y: 587.2619889555352
+Player 1 must be at (158.02341963162684, 587.2619889555352) in frame 769
+Player: 1, lastProcessedFrame: 770, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 771, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 772, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 773, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 774, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 775, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 776, X: 158.02341963162684, Y: 587.2619889555352
+frame received: 770
+frame received: 771
+frame received: 772
+frame received: 773
+frame received: 774
+frame received: 775
+frame received: 776
+frame received: 777
+frame received: 778
+frame received: 779
+frame received: 780
+frame received: 781
+frame received: 782
+frame received: 783
+frame received: 784
+frame received: 785
+frame received: 786
+frame received: 787
+frame received: 788
+frame received: 789
+frame received: 790
+frame received: 791
+frame received: 792
+frame received: 793
+frame received: 794
+frame received: 795
+frame received: 796
+frame received: 797
+frame received: 798
+frame received: 799
+frame received: 800
+frame received: 801
+frame received: 802
+frame received: 803
+frame received: 804
+frame received: 805
+frame received: 806
+frame received: 807
+frame received: 808
+frame received: 809
+frame received: 810
+frame received: 811
+frame received: 812
+frame received: 813
+frame received: 814
+frame received: 815
+frame received: 816
+frame received: 817
+frame received: 818
+frame received: 819
+frame received: 820
+frame received: 821
+frame received: 822
+frame received: 823
+frame received: 824
+frame received: 825
+frame received: 826
+frame received: 827
+frame received: 828
+frame received: 829
+frame received: 830
+frame received: 831
+frame received: 832
+frame received: 833
+frame received: 834
+frame received: 835
+frame received: 836
+frame received: 837
+frame received: 838
+frame received: 839
+frame received: 840
+frame received: 841
+frame received: 842
+frame received: 843
+frame received: 844
+frame received: 845
+frame received: 846
+frame received: 847
+frame received: 848
+frame received: 849
+frame received: 850
+frame received: 851
+frame received: 852
+frame received: 853
+frame received: 854
+frame received: 855
+frame received: 856
+frame received: 857
+frame received: 858
+frame received: 859
+frame received: 860
+frame received: 861
+frame received: 862
+frame received: 863
+frame received: 864
+frame received: 865
+frame received: 866
+frame received: 867
+frame received: 868
+frame received: 869
+frame received: 870
+frame received: 871
+frame received: 872
+frame received: 873
+frame received: 874
+frame received: 875
+frame received: 876
+frame received: 877
+frame received: 878
+frame received: 879
+frame received: 880
+frame received: 881
+frame received: 882
+frame received: 883
+frame received: 884
+frame received: 885
+frame received: 886
+frame received: 887
+frame received: 888
+frame received: 889
+frame received: 890
+frame received: 891
+frame received: 892
+Frame ignored: 770
+Frame ignored: 771
+Frame ignored: 772
+Frame ignored: 773
+Frame ignored: 774
+Frame ignored: 775
+Frame ignored: 776
+Frame added: 777
+Frame added: 778
+Frame added: 779
+Frame added: 780
+Frame added: 781
+Frame added: 782
+Frame added: 783
+Frame added: 784
+Frame added: 785
+Frame added: 786
+Frame added: 787
+Frame added: 788
+Frame added: 789
+Frame added: 790
+Frame added: 791
+Frame added: 792
+Frame added: 793
+Frame added: 794
+Frame added: 795
+Frame added: 796
+Frame added: 797
+Frame added: 798
+Frame added: 799
+Frame added: 800
+Frame added: 801
+Frame added: 802
+Frame added: 803
+Frame added: 804
+Frame added: 805
+Frame added: 806
+Frame added: 807
+Frame added: 808
+Frame added: 809
+Frame added: 810
+Frame added: 811
+Frame added: 812
+Frame added: 813
+Frame added: 814
+Frame added: 815
+Frame added: 816
+Frame added: 817
+Frame added: 818
+Frame added: 819
+Frame added: 820
+Frame added: 821
+Frame added: 822
+Frame added: 823
+Frame added: 824
+Frame added: 825
+Frame added: 826
+Frame added: 827
+Frame added: 828
+Frame added: 829
+Frame added: 830
+Frame added: 831
+Frame added: 832
+Frame added: 833
+Frame added: 834
+Frame added: 835
+Frame added: 836
+Frame added: 837
+Frame added: 838
+Frame added: 839
+Frame added: 840
+Frame added: 841
+Frame added: 842
+Frame added: 843
+Frame added: 844
+Frame added: 845
+Frame added: 846
+Frame added: 847
+Frame added: 848
+Frame added: 849
+Frame added: 850
+Frame added: 851
+Frame added: 852
+Frame added: 853
+Frame added: 854
+Frame added: 855
+Frame added: 856
+Frame added: 857
+Frame added: 858
+Frame added: 859
+Frame added: 860
+Frame added: 861
+Frame added: 862
+Frame added: 863
+Frame added: 864
+Frame added: 865
+Frame added: 866
+Frame added: 867
+Frame added: 868
+Frame added: 869
+Frame added: 870
+Frame added: 871
+Frame added: 872
+Frame added: 873
+Frame added: 874
+Frame added: 875
+Frame added: 876
+Frame added: 877
+Frame added: 878
+Frame added: 879
+Frame added: 880
+Frame added: 881
+Frame added: 882
+Frame added: 883
+Frame added: 884
+Frame added: 885
+Frame added: 886
+Frame added: 887
+Frame added: 888
+Frame added: 889
+Frame added: 890
+Frame added: 891
+Frame added: 892
+lastReceivedFrame: 892
+Player: 1, lastProcessedFrame: 777, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 778, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 779, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 780, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 781, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 782, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 783, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 784, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 785, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 786, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 787, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 788, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 789, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 790, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 791, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 792, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 793, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 794, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 795, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 796, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 797, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 798, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 799, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 800, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 801, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 802, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 803, X: 158.02341963162684, Y: 587.2619889555352
+Player: 1, lastProcessedFrame: 804, X: 158.02341963162684, Y: 587.2619889555352

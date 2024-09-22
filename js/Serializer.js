@@ -1,4 +1,4 @@
-import { setBit, checkBit } from './Bit.js';
+import { setBit, checkBit, clearBit } from './Bit.js';
 import { CMD_END_OF_BUFFER } from './CommandTypes.js';
 
 function cmdToByte(cmd) {
@@ -62,56 +62,167 @@ export class CommandSerializer {
 
     serialize(commands, offset = 0, total = commands.length) {
         const serializer = this.serializer;
-        let size = Math.min(Math.min(commands.length, total), serializer.length - 9 /* size + first.frame + CMD_END_OF_BUFFER */);
-
+        let size = Math.min(commands.length, total);
         if (size <= 0) return 0;
-
-        let copySize = size;
-
-        serializer.writeUInt32(size);  // size
-        let first = commands.at(offset);
-        serializer.writeUInt32(first.frame);  // first frame's number
-        console.log(`frame sent: ${first.frame}`);
-        serializer.writeUInt8(cmdToByte(first)); // command
-
-        let written = 10; /* length + first.frame + first + CMD_END_OF_BUFFER */
-
-        for (let i = (offset + 1); size > 0; size--, i++, written++) {
-            const cmd = commands.at(i);
-            serializer.writeUInt8(cmdToByte(cmd)); // more commands
-            console.log(`frame sent: ${cmd.frame}`);
+        serializer.writeUInt32(commands.at(0).frame);  // first frame's number
+        serializer.writeList(commands, cmd => {
+            console.log('frame sent:', cmd.frame);
+            serializer.writeUInt8(cmdToByte(cmd));
+        }, offset, size);
+        if (serializer.bytes < serializer.length) {
+            serializer.writeUInt8(CMD_END_OF_BUFFER);
         }
-
-        serializer.writeUInt8(CMD_END_OF_BUFFER);
-        written++
-
-        console.assert(written === copySize);
-
-        return written;
+        return serializer.bytes;
     }
 
     deserialize() {
         const serializer = this.serializer;
-        const length = serializer.readUInt32(); // length
-        let commands = [];
-
-        if (length > 0) {
-            const firstFrame = serializer.readUInt32(); // first frame number
-            let firstCmd = byteToCmd(serializer.readUInt8()); // first command
-            firstCmd.frame = firstFrame;
-            commands.push(firstCmd);
-        
-            for (let i = 1; i < length; i++) {
-                const cmd = byteToCmd(serializer.readUInt8()); // more commands
-                cmd.frame = firstFrame + i;
-                commands.push(cmd);
-            }
-        }
-
-        return commands;
+        const frame = serializer.readUInt32();
+        return serializer.readList(j => {
+            const cmd = byteToCmd(serializer.readUInt8());
+            cmd.frame = frame + j;
+            console.log('frame received:', cmd.frame);
+            return cmd;
+        })
     }
 }
 
+export class Bitstream {
+    constructor(bytes, value, bits) {
+        if (bytes <= 8) {
+            this.bytes = 8;
+        } else if (bytes <= 16) {
+            this.bytes = 16;
+        } else if (bytes <= 32) {
+            this.bytes = 32;
+        } else if (bytes <= 64) {
+            this.bytes = 64;
+        } else {
+            throw "It must be between 0 and 64 (inclusive)";
+        }
+
+        this.bits = bits || this.bytes;
+        this.value = value || 0;
+    }
+
+    reset() {
+        this.bits = this.bytes;
+        this.value = 0;
+        return this;
+    }
+
+    offset(bits) {
+        if (bits < 0 || bits > this.bytes) throw "Bit overflown";
+        this.bits = bits;
+        return this;
+    }
+
+    setBit() {
+        if ((this.bits - 1) < 0) throw "Bit overflown";
+        this.value = this.value | 1 << (this.bits - 1);
+        this.bits--;
+        return this;
+    }
+
+    unsetBit() {
+        if ((this.bits - 1) < 0) throw "Bit overflown";
+        this.value = this.value & (~(1 << this.bits - 1));
+        this.bits--;
+        return this;
+    }
+
+    getBit() {
+        if ((this.bits - 1) < 0) throw "Bit overflown";
+        let value = (this.value & (1 << (this.bits - 1))) != 0;
+        this.bits--;
+        return value;
+    }
+
+    peekBit() {
+        return (this.value & (1 << (this.bits - 1))) != 0;
+    }
+
+    flipBit() {
+        this.value = this.value ^ (1 << this.bits);
+    }
+
+    skipBits(numBits) {
+        if (this.bits - numBits < 0) throw "Bit overflown";
+        this.bits -= numBits;
+        return this;
+    }
+
+    setBits(bits, value) {
+        if (this.bits < 0) throw "Bit overflown";
+        console.log(this.bits - bits);
+        this.value = (this.value & (~(((1<<bits) - 1) << (this.bits - bits)))) | ((value & ((1<<bits) - 1)) << (this.bits - bits));
+        this.bits -= bits;
+        return this;
+    }
+
+    getBits(bits) {
+        if ((this.bits - bits) < 0) throw "Bit overflown";
+        let ret = (this.value & ((1<<bits) - 1) << (this.bits - bits)) >> (this.bits - bits);
+        this.bits -= bits;
+        return ret;
+    }
+
+    peekBits(bits) {
+        if (this.bits <= 0) return this;
+        return (this.value & ((1<<bits) - 1) << (this.bits - bits)) >> (this.bits - bits);
+    }
+
+    unsetBits(bits) {
+        if (this.bits <= 0) return this;
+        this.value = (this.value & (~(((1<<bits) - 1) << (this.bits - bits))));
+        this.bits -= bits;
+        return this;
+    }
+
+    coutLeadingZeros() {
+        let count = 0;
+
+        if (this.bits <= 0) return 0;
+
+        let zeros = (this.value & (1 << (this.bits - 1))) === 0;
+
+        if (zeros) count = 1;
+
+        for (let i = this.bits - 1; i >= 0 && zeros; i--, count++) {
+            zeros = (this.value & (1 << (i - 1))) === 0;
+        }
+
+        return count;
+    }
+
+    countLeadingOnes() {
+        let count = 0;
+
+        if (this.bits <= 0) return 0;
+
+        let zeros = (this.value & (1 << (this.bits - 1))) !== 0;
+
+        if (zeros) count = 1;
+
+        for (let i = this.bits - 1; i >= 0 && zeros; i--, count++) {
+            zeros = (this.value & (1 << (i - 1))) !== 0;
+        }
+
+        return count;
+    }
+}
+
+// https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder/encodeInto
+// https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder
+export class Utf8Serializer {
+    constructor(serializer) {
+        this.serializer = serializer;
+    }
+
+    length(str) {
+
+    }
+}
 
 export class BufferSerializer {
     constructor(buf) {
@@ -329,6 +440,46 @@ export class BufferSerializer {
 
     peakFloat64() {
         return this.buffer.readDoubleBE(this.bytes);
+    }
+
+    writeList(arrayLike, cb, begin = 0, total = arrayLike.length) {
+        const arrLen = arrayLike.length;
+        if (arrLen === 0 || total === 0) return this;
+
+        console.assert(total <= arrLen);
+        console.assert(begin >= 0 && begin < total);
+
+        const sizeOffset = this.bytes;
+
+        this.writeUInt32(0);
+
+        let bufferLen = this.length;
+        let prevBytesOffset = this.bytes;
+        cb(arrayLike.at(begin), 0);
+        const packetSize = this.bytes - prevBytesOffset;
+
+        let curAlloc = this.bytes + packetSize;
+
+        let num = 1;
+
+        for (let i = begin + 1; i < arrLen && curAlloc < bufferLen; i++, num++, curAlloc += packetSize) {
+            cb(arrayLike.at(i), num);
+        }
+
+        prevBytesOffset = this.bytes;
+
+        return this.offset(sizeOffset).writeUInt32(num).offset(prevBytesOffset);
+    }
+
+    readList(cb) {
+        const total = this.readUInt32();
+        const ret = [];
+
+        for (let i = 0; i < total; ++i) {
+            ret.push(cb(i));
+        }
+
+        return ret;
     }
 }
 
@@ -549,6 +700,46 @@ export class ArrayBufferSerializer {
     peakFloat64() {
         return this.buffer.getFloat64(this.bytes);
     }
+
+    writeList(arrayLike, cb, begin = 0, total = arrayLike.length) {
+        const arrLen = arrayLike.length;
+        if (arrLen === 0 || total === 0) return this;
+
+        console.assert(total <= arrLen);
+        console.assert(begin >= 0 && begin < total);
+
+        const sizeOffset = this.bytes;
+
+        this.writeUInt32(0);
+
+        let bufferLen = this.length;
+        let prevBytesOffset = this.bytes;
+        cb(arrayLike.at(begin), 0);
+        const packetSize = this.bytes - prevBytesOffset;
+
+        let curAlloc = this.bytes + packetSize;
+
+        let num = 1;
+
+        for (let i = begin + 1; i < arrLen && curAlloc < bufferLen; i++, num++, curAlloc += packetSize) {
+            cb(arrayLike.at(i), num);
+        }
+
+        prevBytesOffset = this.bytes;
+
+        return this.offset(sizeOffset).writeUInt32(num).offset(prevBytesOffset);
+    }
+
+    readList(cb) {
+        const total = this.readUInt32();
+        const ret = [];
+
+        for (let i = 0; i < total; ++i) {
+            ret.push(cb(i));
+        }
+
+        return ret;
+    }
 }
 
 export class Allocator {
@@ -744,220 +935,20 @@ export class DynamicPacketBuilder {
         return this;
     }
 
-    writeList(arrayLike, cb, begin, total) {
+    writeList(arrayLike, cb, begin = 0, total = arrayLike.length) {
         const arrLen = arrayLike.length;
+        if (arrLen === 0 || total === 0) return this;
+
         console.assert(total <= arrLen);
-        console.assert(begin >= 0 && begin <= total && (arrLen - begin) === total);
+        console.assert(begin >= 0 && begin < total);
 
         this.writeUInt32(total);
 
-        if (arrLen === 0 || total === 0 || begin >= total) return this;
-
-        cb.call(this, arrayLike.at(begin), 0);
-
-        for (let i = begin + 1, j = 1; i < arrLen; i++, j++) {
-            cb.call(this, arrayLike.at(i), j);
+        for(let i = begin, j = 0; j < total; i++, j++) {
+            cb(arrayLike.at(i), j);
         }
-
-        return this;
     }
 }
 
 DynamicPacketBuilder.BufferAllocator = (bytes) => new BufferSerializer(Buffer.alloc(bytes));
 DynamicPacketBuilder.ArrayBufferAllocator = (bytes) => new ArrayBufferSerializer(new ArrayBuffer(bytes));
-
-export class StaticPacketBuilder {
-    constructor(serializer) {
-        this.alloc = new Alloator();
-        this.serializer = serializer;
-        this.data = [];
-        this.bufferSizeOffset = -1;
-    }
-
-    get length() {
-        return this.serializer.length;
-    }
-
-    get written() {
-        return this.alloc.length;
-    }
-
-    get buffer() {
-        const serializer = this.serializer;
-        const alloc = this.alloc;
-        const data = this.data;
-
-        serializer.reset();
-        alloc.reset();
-
-        for (const [code, value] of data) {
-            switch(code) {
-                case 1:
-                    serializer.writeString(value);
-                    break;
-                case 2:
-                    serializer.writeInt8(value);
-                    break;
-                case 3:
-                    serializer.writeUInt8(value);
-                    break;
-                case 4:
-                    serializer.writeInt16(value);
-                    break;
-                case 5:
-                    serializer.writeUInt16(value);
-                    break;
-                case 6:
-                    serializer.writeInt32(value);
-                    break;
-                case 7:
-                    serializer.writeUInt32(value);
-                    break;
-                case 8:
-                    serializer.writeInt64(value);
-                    break;
-                case 9:
-                    serializer.writeUInt64(value);
-                    break;
-                case 10:
-                    serializer.writeFloat32(value);
-                    break;
-                case 11:
-                    serializer.writeFloat64(value);
-                    break;
-            }
-        }
-
-        if (alloc.length < serializer.length) {
-            alloc.uint8();
-            serializer.writeUInt8(CMD_END_OF_BUFFER);
-        }
-
-        return alloc.length;
-    }
-    
-    writeString(str) {
-        this.alloc.string(str);
-        const overfloat = this.alloc.length > this.serializer.length;
-        if (overfloat) throw 'Buffer was overflown';
-        this.data.push([1, str]);
-        return this;
-    }
-
-    writeInt8(value) {
-        this.alloc.int8();
-        const overfloat = this.alloc.length > this.serializer.length;
-        if (overfloat) throw 'Buffer was overflown';
-        this.data.push([2, value]);
-        return this;
-    }
-
-    writeUInt8(value) {
-        this.alloc.uint8();
-        const overfloat = this.alloc.length > this.serializer.length;
-        if (overfloat) throw 'Buffer was overflown';
-        this.data.push([3, value]);
-        return this;
-    }
-
-    writeInt16(value) {
-        this.alloc.int16();
-        const overfloat = this.alloc.length > this.serializer.length;
-        if (overfloat) throw 'Buffer was overflown';
-        this.data.push([4, value]);
-        return this;
-    }
-
-    writeUInt16(value) {
-        this.alloc.uint16();
-        const overfloat = this.alloc.length > this.serializer.length;
-        if (overfloat) throw 'Buffer was overflown';
-        this.data.push([5, value]);
-        return this;
-    }
-
-    writeInt32(value) {
-        this.alloc.int32();
-        const overfloat = this.alloc.length > this.serializer.length;
-        if (overfloat) throw 'Buffer was overflown';
-        this.data.push([6, value]);
-        return this;
-    }
-
-    writeUInt32(value) {
-        this.alloc.uint32();
-        const overfloat = this.alloc.length > this.serializer.length;
-        if (overfloat) throw 'Buffer was overflown';
-        this.data.push([7, value]);
-        return this;
-    }
-
-    writeInt64(value) {
-        this.alloc.int64();
-        const overfloat = this.alloc.length > this.serializer.length;
-        if (overfloat) throw 'Buffer was overflown';
-        this.data.push([8, value]);
-        return this;
-    }
-
-    writeUInt64(value) {
-        this.alloc.uint64();
-        const overfloat = this.alloc.length > this.serializer.length;
-        if (overfloat) throw 'Buffer was overflown';
-        this.data.push([9, value]);
-        return this;
-    }
-
-    writeFloat32(value) {
-        this.alloc.float32();
-        const overfloat = this.alloc.length > this.serializer.length;
-        if (overfloat) throw 'Buffer was overflown';
-        this.data.push([10, value]);
-        return this;
-    }
-
-    writeFloat64(value) {
-        this.alloc.float64();
-        const overfloat = this.alloc.length > this.serializer.length;
-        if (overfloat) throw 'Buffer was overflown';
-        this.data.push([11, value]);
-        return this;
-    }
-
-    writeList(arrayLike, cb, begin, total) {
-        const arrLen = arrayLike.length;
-        console.assert(total <= arrLen);
-        console.assert(begin >= 0 && begin < total);
-        let bufferLen = this.serializer.length;
-        let prevBufAlloc = this.alloc.length;
-        const sizeIndex = this.data.length;
-
-        this.writeUInt32(0);
-
-        if (arrLen === 0 || total === 0 || begin >= total) return this;
-
-        cb.call(this, arrayLike.at(begin), 0);
-
-        let curBufAlloc, curAlloc;
-        curBufAlloc = curAlloc = this.alloc.length;
-        const packetSize = curBufAlloc - prevBufAlloc;
-
-        if (curAlloc > bufferLen) throw 'Buffer was overflown';
-
-        curAlloc += packetSize;
-        prevBufAlloc = curBufAlloc;
-        let j = 1;
-
-        for (let i = begin + 1; i < arrLen && curAlloc <= bufferLen; i++, j++, curAlloc += packetSize) {
-            cb.call(this, arrayLike.at(i), j);
-            curBufAlloc = this.alloc.length;
-            if ((curBufAlloc - prevBufAlloc) != packetSize)
-                throw 'can\'t have varying size!';
-            prevBufAlloc = curBufAlloc;
-        }
-
-        this.data[sizeIndex][1] = j; // number of elements actually written!
-
-        return this;
-    }
-}

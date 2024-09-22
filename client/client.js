@@ -198,8 +198,7 @@ export default class GameScene extends Phaser.Scene {
         commandSerializer.serializer.writeUInt8(CMD_CLIENT_UPDATE);
         // const total = Math.min(commands.length, this.serverBufferSize);
         const skip = player.lastReceivedFrame - player.lastProcessedFrame;
-        const count = commands.length - skip;
-        if (commandSerializer.serialize(commands, skip, count) > 0) {
+        if (commandSerializer.serialize(commands, skip) > 0) {
             this.socket.send(commandSerializer.buffer);
         }
     }

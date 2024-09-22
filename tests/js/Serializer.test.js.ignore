@@ -1,0 +1,97 @@
+import { describe, expect, it } from '@jest/globals';
+import { Bitstream } from '../../js/Serializer.js';
+
+
+describe('Bitstream', () => {
+    it('must be set four hight level bits of a 8-bits.', () => {
+        const b= new Bitstream(8);
+        expect(bit.bytes).toBe(8);
+        expect(bit.bits).toBe(8);
+        bit.setBit();
+        bit.setBit();
+        bit.setBit();
+        bit.setBit();
+        expect(bit.value).toBe(0xF0);
+    });
+
+    it('must be set four hight level bits of a 16-bits.', () => {
+        const b= new Bitstream(16);
+        expect(bit.bytes).toBe(16);
+        expect(bit.bits).toBe(16);
+        bit.setBit();
+        bit.setBit();
+        bit.setBit();
+        bit.setBit();
+        expect(bit.value).toBe(0xF000);
+    });
+
+    it('must be unset four hight level bits of a 8-bits.', () => {
+        const b= new Bitstream(8, 0xFF);
+        expect(bit.bytes).toBe(8);
+        expect(bit.bits).toBe(8);
+        bit.unsetBit();
+        bit.unsetBit();
+        bit.unsetBit();
+        bit.unsetBit();
+        expect(bit.value).toBe(0x0F);
+    });
+
+    it('must be set the first of the high level and low level bits of a 8-bits.', () => {
+        const b= new Bitstream(8, 0xFF);
+        expect(bit.bytes).toBe(8);
+        expect(bit.bits).toBe(8);
+        bit.unsetBit();
+        bit.unsetBit();
+        bit.unsetBit();
+        bit.setBit();
+        bit.unsetBit();
+        bit.unsetBit();
+        bit.unsetBit();
+        bit.setBit();
+        expect(bit.value).toBe(0x11);
+    });
+
+    it('must be set the first of the high level and low level bits of a 8-bits but using skip().', () => {
+        const b= new Bitstream(8, 0x0);
+        expect(bit.bytes).toBe(8);
+        expect(bit.bits).toBe(8);
+        bit.skipBits(3);
+        bit.setBit();
+        bit.skipBits(3);
+        bit.setBit();
+        expect(bit.value).toBe(0x11);
+    });
+
+    it('must be set the first of the high level and low level bits of a 8-bits but using offset().', () => {
+        const b= new Bitstream(8, 0x0);
+        expect(bit.bytes).toBe(8);
+        expect(bit.bits).toBe(8);
+        bit.offset(5);
+        bit.setBit();
+        bit.offset(1);
+        bit.setBit();
+        expect(bit.value).toBe(0x11);
+    });
+
+    it('must be unset the first of the high level and low level bits of a 8-bits but using offset().', () => {
+        const b= new Bitstream(8, 0xAA);
+        expect(bit.bytes).toBe(8);
+        expect(bit.bits).toBe(8);
+        expect(bit.getBit()).toBe(true);
+        expect(bit.getBit()).toBe(false);
+        expect(bit.getBit()).toBe(true);
+        expect(bit.getBit()).toBe(false);
+        expect(bit.getBit()).toBe(true);
+        expect(bit.getBit()).toBe(false);
+        expect(bit.getBit()).toBe(true);
+        expect(bit.getBit()).toBe(false);
+    });
+
+    it('must be set the first 3 high level bits of 64-bits to 2.', () => {
+        const b= new Bitstream(32);
+        expect(bit.bytes).toBe(32);
+        expect(bit.bits).toBe(32);
+        bit.setBits(3, 2);
+        expect(bit.value).toBe(0x40000000);
+    });
+});
