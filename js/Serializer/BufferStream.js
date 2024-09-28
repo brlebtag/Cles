@@ -10,7 +10,7 @@ export default class BufferStream {
 
     skipBit() {
         this.bits--;
-        if (this.bits == 0) {
+        if (this.bits === 0) {
             this.bits = 8;
         }
     }
@@ -18,7 +18,7 @@ export default class BufferStream {
     skipBits(bits) {
         this.bytes -= Math.floor(bits / 8);
         this.bits = (bits + this.bits) % 8;
-        if (this.bits == 0) {
+        if (this.bits === 0) {
             this.bits = 8;
         }
     }
@@ -27,7 +27,7 @@ export default class BufferStream {
         this.remainder = this.remainder | 1 << (this.bits - 1);
         this.bits--;
 
-        if (this.bits == 0) {
+        if (this.bits === 0) {
             this.bits = 8;
             this.buf.writeUInt8(this.remainder, this.bytes++);
             this.remainder = 0x0;
@@ -367,7 +367,7 @@ export default class BufferStream {
 
     #consumeBitsFrom(source, destiny, remainder, bits) {
         let sourceBits = bits % 8;
-        let index = Math.floor(bits / 8) - 1;
+        let index = Math.floor(bits / 8);
 
         if (this.bits <= sourceBits) {
             const remaining = sourceBits - this.bits;
@@ -381,33 +381,29 @@ export default class BufferStream {
         } else {
             let remaining = (8-sourceBits) - (8-this.bits);
             let byte = source.readUInt8(index--);
-            const high = byte << remaining;
-            let low = 0;
-            if (index > 0) {
-                byte = source.readUInt8(index--);
-                low = byte >> (8 - remaining);
-            }
-            destiny.writeUInt8(remainder | high | low, this.bytes++);
-            remainder = (byte << remaining) & 0xFF;
-            this.bits -= (sourceBits + remaining);
-            bits -= (sourceBits + remaining);
-            sourceBits = 8 - remaining;
+            remainder = remainder | (byte << remaining);
+            this.bits -= remaining;
+            bits -= remaining;
+            sourceBits = remaining;
         }
 
         if (this.bits <= 0) this.bits = 8;
 
-        while (bits > 8 && index > 0) {
+        while (bits >= 8 && index >= 0) {
             const remaining = (8 - sourceBits);
             const byte = source.readUInt8(index);
             const low = byte >> remaining;
             const high = (byte << sourceBits) & 0xFF;
             destiny.writeUInt8(remainder | low, this.bytes++);
             remainder = high;
+            bits -= sourceBits;
+            this.bits -= sourceBits;
             sourceBits -= 8 - remaining;
             if (sourceBits <= 0) {
                 sourceBits = 8;
                 index--;
             }
+            if (this.bits <= 0) this.bits = 8;
         }
         
         return remainder;
