@@ -37,8 +37,14 @@ export default class BufferStream {
     writeBits(bits, value) {
         console.assert(bits > 0 && bits <= 64);
         this.temp.writeBigUInt64BE(value);
-        this.#consumeBitsFrom(this.temp, this.buf, this.remainder, bits);
+        this.#writeBitsFrom(this.temp, this.buf, this.remainder, bits);
         return this;
+    }
+
+    readBits(bits) {
+        console.assert(bits > 0 && bits <= 64);
+        this.remainder = this.#readBitsFrom(this.buf, this.temp, this.remainder, bits, this.bytes);
+        return this.temp.readBigUInt64BE(0);;
     }
 
     // int8
@@ -365,9 +371,9 @@ export default class BufferStream {
         return remainder;
     }
 
-    #consumeBitsFrom(source, destiny, remainder, bits) {
+    #writeBitsFrom(source, destiny, remainder, bits, end = 64) {
         let sourceBits = bits % 8;
-        let index = Math.floor(bits / 8);
+        let index = Math.floor((end - bits) / 8);
 
         if (this.bits <= sourceBits) {
             const remaining = sourceBits - this.bits;
@@ -406,6 +412,19 @@ export default class BufferStream {
             if (this.bits <= 0) this.bits = 8;
         }
         
+        return remainder;
+    }
+
+    #readBitsFrom(source, destiny, remainder, bits, end = 64) {
+        let destinyBits = bits % 8;
+        let destinyIndex = Math.floor((end - bits) / 8);
+
+        if (this.bits > destinyBits) {
+
+        } else {
+            
+        }
+
         return remainder;
     }
 
